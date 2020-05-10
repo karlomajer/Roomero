@@ -1,0 +1,43 @@
+.rc-input-number {
+  width: 8rem;
+  height: 3rem;
+}
+
+.rc-input-number {
+  border: 1px solid #e2e8f0;
+}
+
+.rc-input-number-handler-wrap {
+  border-left: 1px solid #e2e8f0;
+}
+
+.rc-input-number-handler-up {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.rc-input-number-handler-wrap > span {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rc-input-number-handler-wrap > span > span {
+  text-align: center;
+  font-size: 1.11rem;
+}
+
+.rc-input-number-input-wrap > input {
+  font-size: 1.14rem;
+  color: #26282c;
+}
+
+.rc-input-number:hover,
+.rc-input-number:hover .rc-input-number-handler-wrap,
+.rc-input-number:hover .rc-input-number-handler-up {
+  border-color: inherit;
+}
+
+.rc-input-number:focus * {
+  box-shadow: none;
+}

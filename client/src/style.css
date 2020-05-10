@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff;
+  @apply text-gray-900;
+}
+
+/* Hover effects go here to avoid having them on phones and tablets */
+@media (hover: hover) and (pointer: fine) {
+  .navbar-links > li > a:hover {
+    @apply duration-150 text-accent-500;
+  }
+
+  .navbar-links > li > a.btn-primary:hover {
+    @apply text-white;
+  }
+
+  .btn-primary:hover {
+    @apply duration-150 bg-accent-600;
+  }
+
+  .btn-secondary:hover {
+    @apply duration-150;
+    background-color: #1e2022;
+  }
+
+  .btn-danger:hover {
+    @apply duration-150 bg-red-600;
+  }
+
+  .btn-success:hover {
+    @apply duration-150 bg-green-600;
+  }
+}
+
+/* For pushing footer to bottom */
+.page-wrap {
+  min-height: calc(100vh - 200px);
+}
+
+.navbar {
+  @apply fixed flex justify-between items-center w-full top-0 py-1 px-8 bg-white;
+}
+
+.navbar-links {
+  @apply flex text-center justify-center;
+}
+
+.navbar-links > li {
+  @apply font-medium p-2 mx-1;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fdfdfd;
+  top: 44px;
+  min-width: 155px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.dropdown-content > a:hover {
+  background-color: #ededed;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- HAMBURGER START --- */
+.hamburger {
+  display: block;
+  width: 30px;
+  transform: scale(0.8);
+  z-index: 3;
+  padding: 1.12rem 0;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger:before,
+.hamburger:after {
+  background-color: #000000;
+  content: '';
+  display: block;
+  height: 4px;
+  transition: all 200ms ease-in-out;
+}
+.hamburger:before {
+  box-shadow: 0 10px 0 #000000;
+  margin-bottom: 16px;
+}
+
+.hamburger-open:before {
+  box-shadow: 0 0 0 #000000;
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-open:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Hamburger Clicked Overlay */
+.overlay {
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  top: 12%;
+  width: 100%;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: 0.15s;
+}
+
+/* --- HAMBURGER END --- */
+
+.form-group > input[type='text']:focus ~ .input-label,
+.form-group > input[type='email']:focus ~ .input-label,
+.form-group > input[type='password']:focus ~ .input-label,
+.form-group > input[type='number']:focus ~ .input-label,
+.form-group > input[type='date']:focus ~ .input-label,
+.form-group > select:focus ~ .input-label,
+.form-group > textarea:focus ~ .input-label {
+  @apply text-accent-500 duration-150;
+}
+
+/* Hide input number spinner buttons */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+:-moz-ui-invalid:not(output) {
+  box-shadow: none;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 200px));
+}
+
+.flex-break {
+  /* Set flex parent to flex-wrap */
+  flex-basis: 100%;
+  height: 0;
+}
+
+.btn {
+  @apply inline-block px-6 py-3 rounded-md shadow-lg capitalize font-semibold cursor-pointer;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.badge {
+  @apply rounded-full py-1 px-3 text-sm;
+}
+
+.alert {
+  position: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 0.8rem;
+  @apply font-medium;
+}
+
+.btn-primary,
+.badge-primary,
+.alert-primary {
+  @apply bg-accent-500 text-white;
+}
+
+.btn-secondary,
+.badge-secondary,
+.alert-secondary {
+  @apply bg-gray-900 text-white;
+}
+
+.btn-danger,
+.badge-danger,
+.alert-danger {
+  @apply bg-red-500 text-white;
+}
+
+.btn-success,
+.badge-success,
+.alert-success {
+  @apply bg-green-500 text-white;
+}
+
+.btn-light,
+.badge-light,
+.alert-light {
+  @apply text-accent-500 shadow-none border border-gray-300;
+}
+
+.btn-primary:active {
+  @apply bg-accent-600;
+}
+
+.btn-secondary:active {
+  background-color: #1e2022;
+}
+
+.btn-danger:active {
+  @apply bg-red-600;
+}
+
+.btn-success:active {
+  @apply bg-green-600;
+}
+
+.section-heading {
+  @apply text-4xl inline-block border-solid border-b-4 border-accent-500;
+}
+
+.section-line {
+  @apply border-b border-gray-300;
+}
+
+.form-group {
+  @apply flex flex-col my-5;
+}
+
+.form-group .input-label {
+  @apply w-full tracking-wide font-medium order-first;
+}
+
+.form-group .input {
+  @apply w-full p-2 bg-accent-100 rounded-md border-2 border-transparent;
+}
+
+.form-group .input::-webkit-input-placeholder {
+  @apply text-gray-500;
+}
+
+.form-group .input::-moz-placeholder {
+  @apply text-gray-500;
+}
+
+.form-group .input:-ms-input-placeholder {
+  @apply text-gray-500;
+}
+
+.form-group .input:-moz-placeholder {
+  @apply text-gray-500;
+}
+
+.form-group .input:focus {
+  @apply outline-none bg-white border-accent-400;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-column-gap: 1.75rem;
+  grid-row-gap: 2rem;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(365px, auto);
+  grid-row-gap: 1rem;
+  grid-column-gap: 3rem;
+}
+
+.listing-grid .listing-carousel {
+  grid-column: 1 / -1;
+}
+
+.listing-grid .info {
+  grid-column: 1 / 1;
+}
+
+.listing-grid .reservation {
+  grid-column: 2 / 2;
+}
+
+.listing-grid .location {
+  grid-column: 1 / -1;
+}
+
+@tailwind utilities;
+
+/*   Mobile Styles   */
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  /* ... */
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .form-group {
+    @apply flex-row items-center;
+  }
+
+  .form-group .input-label {
+    @apply w-40;
+  }
+
+  .form-group .input-half {
+    @apply w-56;
+  }
+
+  .form-group .input-full {
+    @apply w-9/12;
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  /* ... */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  /* ... */
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  div#hamburger-menu div.overlay-content ul.navbar-links a {
+    font-size: 2rem;
+  }
+}
+
+/* Smaller than medium (md) */
+@media (max-width: 767px) {
+  div#hamburger-menu div.overlay-content ul.navbar-links {
+    flex-direction: column;
+  }
+
+  .listing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-grid .reservation {
+    grid-column: 1 / -1;
+  }
+}

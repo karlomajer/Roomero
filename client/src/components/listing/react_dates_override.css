@@ -1,0 +1,78 @@
+.DateRangePicker {
+  display: block !important;
+}
+
+.DateRangePicker > * {
+  width: 100% !important;
+}
+
+.DateRangePickerInput {
+  width: 100% !important;
+}
+
+/* Desktop font */
+.DateRangePicker > * > * > * > * {
+  font-size: 1.05rem !important;
+}
+
+/* Mobile font */
+.DateRangePicker > * > * > * {
+  font-size: 1.05rem !important;
+}
+
+.DateInput {
+  width: 120px !important;
+}
+
+.DateInput_input {
+  color: #26282c !important;
+  font-weight: 400;
+}
+
+.DateRangePickerInput__withBorder {
+  border: 1px solid #e2e8f0;
+}
+
+.CalendarDay__selected_span {
+  background: #7f9cf5;
+  color: white;
+  border: none;
+}
+
+.CalendarDay__selected {
+  background: #5a67d8;
+  color: white;
+  border: none;
+}
+
+.CalendarDay__selected:hover,
+.CalendarDay__selected:active {
+  background: #4c51bf;
+  color: white;
+  border: none;
+}
+
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: #667eea;
+  color: white;
+  border: none;
+}
+
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: #667eea;
+  border: none;
+}
+
+.DateInput_input__focused {
+  border-bottom: 2px solid #667eea;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-right: 33px solid #667eea;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight:hover::before {
+  border-right: 33px solid #5a67d8;
+}

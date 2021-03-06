@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongo_URI_here",
-    "jwtSecret": "jwt_secret_here"
+    "mongoURI": "mongodb+srv://kmajer:kmajer@seminar-0jrq7.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "vdtqos1s50zJhFCwQWMu9uZQhlEMKxnfO9udP8UM04QOFRxitT64oiOBBDLrcYC"
 }

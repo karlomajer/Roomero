@@ -5,11 +5,11 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
   <ul className='navbar-links items-center'>
     <li>
       <Link
-        to='new-listing'
+        to='/new-listing'
         className='btn btn-primary px-4 py-2'
         style={{ paddingTop: '0.55rem', paddingBottom: '0.55rem' }}
       >
-        <i class='fas fa-plus-square' style={{ marginRight: '0.5rem' }}></i>
+        <i className='fas fa-plus-square' style={{ marginRight: '0.5rem' }}></i>
         Create listing
       </Link>
     </li>
@@ -20,7 +20,7 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
       <Link to='/profile/me/reservations'>Reservations</Link>
     </li>
     <li>
-      <div class='dropdown'>
+      <div className='dropdown'>
         <div
           style={{
             display: 'inline-block',
@@ -37,7 +37,7 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
           />
         </div>
         <span className='pl-3'>{profileAuth.name}</span>
-        <div class='dropdown-content'>
+        <div className='dropdown-content'>
           <Link to='/profile/me' className='block text-left pl-4 py-2'>
             Profile
           </Link>

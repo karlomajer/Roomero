@@ -5,8 +5,7 @@ import { getListings, clearListings } from '../../actions/listing';
 import LocationAutocomplete from './LocationAutocomplete';
 import ListingItem from './ListingItem';
 import ReactPaginate from 'react-paginate';
-
-// TODO: Add spinner
+import Spinner from '../utils/Spinner';
 
 const Listings = ({
   getListings,
@@ -53,7 +52,7 @@ const Listings = ({
   return (
     <div className='container page-wrap max-w-screen-xl mx-auto my-20 px-8 md:py-4'>
       {listings === null || loading ? (
-        /* <Spinner variant='brand' size='large' /> */ <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
         <Fragment>
           <h1 className='section-heading'>Find a place to stay</h1>

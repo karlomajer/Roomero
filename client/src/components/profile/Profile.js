@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getProfileById, clearProfile } from '../../actions/profile';
-
-// TODO: Add spinner
+import Spinner from '../utils/Spinner';
 
 const Profile = ({
   match,
@@ -21,7 +20,7 @@ const Profile = ({
   return (
     <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {profile === null || loading ? (
-        <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
         <Fragment>
           <div className='flex flex-col items-center'>

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PlacesAutocomplete from 'react-places-autocomplete';
-
-// TODO: Add spinner
+import Spinner from '../utils/Spinner';
 
 const LocationAutocomplete = ({ location, setLocation }) => {
   // Exclude businesses and points of interest
@@ -11,7 +10,7 @@ const LocationAutocomplete = ({ location, setLocation }) => {
   };
 
   return (
-    <div className='location-autocomplete my-10'>
+    <div className='flex w-full my-10' style={{ maxWidth: '450px' }}>
       <PlacesAutocomplete
         value={location}
         onChange={setLocation}
@@ -19,7 +18,7 @@ const LocationAutocomplete = ({ location, setLocation }) => {
         searchOptions={searchOptions}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
+          <div className='w-full'>
             {/* As per documentation, an input which gets its props from getInputProps function needs to be included and it's also possible to pass in additional proprs to that function, like placeholder */}
             <input
               {...getInputProps({
@@ -31,8 +30,6 @@ const LocationAutocomplete = ({ location, setLocation }) => {
             />
 
             <div className='block w-full'>
-              {loading ? <div>...loading</div> : null}
-
               {suggestions.map(suggestion => {
                 const style = {
                   backgroundColor: suggestion.active ? '#667eea' : '#ebf4ff',

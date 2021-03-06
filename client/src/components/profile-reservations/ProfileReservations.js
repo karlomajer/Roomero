@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getGuestReservations, clearReservations } from '../../actions/listing';
 import ReservationItem from '../utils/ReservationItem/ReservationItem';
+import Spinner from '../utils/Spinner';
 
 const ProfileReservations = ({
   getGuestReservations,
@@ -14,12 +15,10 @@ const ProfileReservations = ({
     return () => clearReservations();
   }, [getGuestReservations, clearReservations]);
 
-  // TODO: Add spinner
-
   return (
     <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {listing === null || listing.loading ? (
-        <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
         <Fragment>
           <h1 className='section-heading'>My Reservations</h1>

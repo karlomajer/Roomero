@@ -9,14 +9,13 @@ import ListingAmenities from './ListingAmenities';
 import ListingReservation from './ListingReservation';
 import ListingDescription from './ListingDescription';
 import ListingLocation from './ListingLocation';
-
-// TODO: Add spinner
+import Spinner from '../utils/Spinner';
 
 const Listing = ({
   match,
   getListingById,
   clearListings,
-  listing: { listing, loading }
+  listing: { listing, loading },
 }) => {
   useEffect(() => {
     getListingById(match.params.id);
@@ -26,7 +25,7 @@ const Listing = ({
   return (
     <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {listing === null || loading ? (
-        <span>...loading</span>
+        <Spinner className='pt-20' />
       ) : (
         <div className='listing-grid'>
           <div className='listing-carousel'>
@@ -64,11 +63,11 @@ const Listing = ({
 Listing.propTypes = {
   getListingById: PropTypes.func.isRequired,
   clearListings: PropTypes.func.isRequired,
-  listing: PropTypes.object.isRequired
+  listing: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  listing: state.listing
+  listing: state.listing,
 });
 
 export default connect(mapStateToProps, { getListingById, clearListings })(

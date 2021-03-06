@@ -8,6 +8,7 @@ import {
   clearListings,
 } from '../../actions/listing';
 import ListingItem from './ListingItem';
+import Spinner from '../utils/Spinner';
 
 const ProfileListings = ({
   getListingsHost,
@@ -20,22 +21,20 @@ const ProfileListings = ({
     return () => clearListings();
   }, [getListingsHost, clearListings]);
 
-  // TODO: add spinner
-
   return (
     <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {loading || listings === null ? (
-        <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
         <Fragment>
           <h1 className='section-heading'>My Listings</h1>
           <div className='my-10 block md:hidden'>
             <Link
-              to='new-listing'
+              to='/new-listing'
               className='btn btn-primary w-full md:w-auto py-3 text-center normal-case text-lg'
             >
               <i
-                class='fas fa-plus-square'
+                className='fas fa-plus-square'
                 style={{
                   marginRight: '0.5rem',
                   verticalAlign: '-.0667em',
@@ -51,7 +50,7 @@ const ProfileListings = ({
             </div>
           ) : (
             <div className='flex flex-col my-10'>
-              {listings.map((listing) => (
+              {listings.map(listing => (
                 <ListingItem
                   key={listing._id}
                   listing={listing}
@@ -73,7 +72,7 @@ ProfileListings.propTypes = {
   listing: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   listing: state.listing,
 });
 

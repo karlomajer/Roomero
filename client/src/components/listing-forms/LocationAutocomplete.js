@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
-// TODO: Add spinner
-
 const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
   const searchOptions = {
     types: ['address'],
@@ -41,8 +39,6 @@ const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
             </label>
 
             <div className='block w-full md:ml-40'>
-              {loading ? <div>...loading</div> : null}
-
               {suggestions.map(suggestion => {
                 const style = {
                   backgroundColor: suggestion.active ? '#667eea' : '#ebf4ff',

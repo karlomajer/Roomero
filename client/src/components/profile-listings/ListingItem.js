@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 const ListingItem = ({ removeListing, listing }) => {
   return (
-    <Fragment>
+    <div className='bg-secondary-300 px-6 py-7 mb-5 rounded-lg'>
       <div className='w-full flex flex-col md:flex-row items-center'>
         <Link to={`/listing/${listing._id}`} className='w-full md:w-auto'>
           <img
             src={listing.images[0]}
             alt='Property'
-            className='w-full h-64 md:h-32 md:w-64 object-cover'
+            className='w-full h-64 md:h-32 md:w-64 object-cover rounded'
           />
         </Link>
         <div className='mt-4 md:mt-0 md:ml-6 flex flex-row flex-wrap justify-center sm:justify-between w-full items-center'>
@@ -23,32 +23,31 @@ const ListingItem = ({ removeListing, listing }) => {
             <h2 className='font-semibold inline-block'>
               {listing.pricePerNight} € / night
             </h2>
-            <h3>{listing.location.join(', ')}</h3>
+            <h3 className='text-gray-500'>{listing.location.join(', ')}</h3>
           </div>
           <div>
             <Link
               to={`/listing/${listing._id}/reservations`}
-              className='btn btn-light block py-2 mx-auto mb-4 mt-2 sm:mt-0'
+              className='btn btn-primary block py-2 mx-auto mb-4 mt-2 sm:mt-0'
             >
               Reservations
             </Link>
             <button
               onClick={() => removeListing(listing._id)}
-              className='btn btn-danger block py-2 mx-auto w-full'
+              className='btn bg-secondary-200 text-red-600 block py-2 mx-auto w-full'
             >
               Delete
             </button>
           </div>
         </div>
       </div>
-      <div className='section-line my-8'></div>
-    </Fragment>
+    </div>
   );
 };
 
 ListingItem.propTypes = {
   removeListing: PropTypes.func.isRequired,
-  listing: PropTypes.object.isRequired
+  listing: PropTypes.object.isRequired,
 };
 
 export default ListingItem;

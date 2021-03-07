@@ -65,7 +65,7 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
 );
 
 export const GuestLinksDesktop = () => (
-  <ul className='navbar-links' style={{ padding: '0.62rem 0' }}>
+  <ul className='navbar-links items-center' style={{ padding: '0.62rem 0' }}>
     <li>
       <Link to='/register'>Register</Link>
     </li>
@@ -116,6 +116,11 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
     </li>
 
     <li className='text-2xl' style={{ fontWeight: '300' }}>
+      <Link to='/new-listing' onClick={closeHamburger}>
+        Create Listing
+      </Link>
+    </li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/profile/me/listings' onClick={closeHamburger}>
         Listings
       </Link>
@@ -142,12 +147,12 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
 
 export const GuestLinksMobile = () => (
   <ul className='navbar-links'>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/register' onClick={closeHamburger}>
         Register
       </Link>
     </li>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/login' onClick={closeHamburger}>
         Login
       </Link>

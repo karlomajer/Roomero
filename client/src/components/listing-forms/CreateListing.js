@@ -65,7 +65,7 @@ const CreateListing = ({ createListing, history }) => {
 
   return (
     <div className='container page-wrap flex-grow max-w-screen-xl mx-auto mt-20 mb-4 px-4 sm:px-8 md:px-10'>
-      <div className='bg-secondary-200 mt-10 px-6 md:px-10 pt-6 pb-6 rounded-md'>
+      <div className='bg-secondary-200 mt-10 px-6 md:px-10 py-6 rounded-md'>
         <h2 className='section-heading'>Create a new listing</h2>
         <form className='mt-10' onSubmit={onSubmit}>
           <div className='form-group'>

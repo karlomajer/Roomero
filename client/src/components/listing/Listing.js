@@ -23,11 +23,11 @@ const Listing = ({
   }, [getListingById, clearListings, match.params.id]);
 
   return (
-    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto mt-30 mb-4 px-8 sm:rounded-b-md'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto mt-30 mb-4 px-8'>
       {listing === null || loading ? (
         <Spinner className='pt-20' />
       ) : (
-        <div className='bg-secondary-200 px-8 pb-10 lg:-mx-8'>
+        <div className='bg-secondary-200 px-8 pb-10 lg:-mx-8 rounded-b-md'>
           <div className='listing-grid'>
             <div className='listing-carousel'>
               <ListingCarousel images={listing.images} />

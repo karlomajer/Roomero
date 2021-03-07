@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createProfile } from '../../actions/profile';
 import FileUpload from '../utils/FileUpload';
+import Spinner from '../utils/Spinner';
 
 const EditProfile = ({
   history,
@@ -62,11 +63,11 @@ const EditProfile = ({
   return (
     <div className='container page-wrap flex-grow max-w-screen-xl mx-auto mt-20 mb-4 px-4 sm:px-8 md:px-10'>
       {profileAuth === null || loading ? (
-        <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
-        <div className='bg-secondary-200 mt-10 px-6 md:px-10 pt-6 pb-8 rounded-md'>
+        <div className='bg-secondary-200 mt-10 px-6 md:px-10 py-6 rounded-md'>
           <h2 className='section-heading'>Edit Profile</h2>
-          <form className='my-10' onSubmit={onSubmit}>
+          <form className='mt-10' onSubmit={onSubmit}>
             <div className='form-group'>
               <input
                 id='bio'

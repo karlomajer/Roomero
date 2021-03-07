@@ -26,8 +26,8 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <div
-      className='container page-wrap flex-grow mx-auto mt-4 md:mt-20 mb-4 px-4'
-      style={{ maxWidth: '800px' }}
+      className='w-full page-wrap flex-grow mx-auto mt-4 md:mt-20 mb-4 px-4'
+      style={{ maxWidth: '700px' }}
     >
       <div className='mt-24 md:mt-16 bg-secondary-200 px-8 py-6 rounded-md'>
         <h1 className='section-heading text-3xl md:text-4xl text-gray-50'>

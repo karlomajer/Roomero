@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
   return (
-    <div className='ml-4 md:pr-4 mb-0 mt-6 md:mt-0'>
+    <div className='ml-4 md:pr-4 mb-0 mt-6 md:mt-2'>
       <Link to={`/profile/${_id}`}>
         <div
           className='mx-auto cursor-pointer'
@@ -21,7 +21,7 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
           <img
             style={{ height: '-webkit-fill-available' }}
             src={avatar}
-            className='object-cover'
+            className='w-full object-cover'
             alt='Avatar'
           />
         </div>

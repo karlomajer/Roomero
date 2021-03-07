@@ -7,13 +7,13 @@ import FileUpload from '../utils/FileUpload';
 const EditProfile = ({
   history,
   createProfile,
-  profile: { profileAuth, loading }
+  profile: { profileAuth, loading },
 }) => {
   const [formData, setFormData] = useState({
     bio: '',
     location: '',
     languages: [],
-    avatar: []
+    avatar: [],
   });
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const EditProfile = ({
           loading || !profileAuth.languages
             ? ''
             : profileAuth.languages.join(', '),
-        avatar: loading || !profileAuth.avatar ? '' : profileAuth.avatar
+        avatar: loading || !profileAuth.avatar ? '' : profileAuth.avatar,
       });
     }
   }, [loading, profileAuth]);
@@ -54,13 +54,13 @@ const EditProfile = ({
         avatar !== uploadData.filePaths &&
         uploadData.filePaths !== undefined &&
         avatar,
-      avatar: uploadData.filePaths
+      avatar: uploadData.filePaths,
     };
     createProfile(_formData, history, true);
   };
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {profileAuth === null || loading ? (
         <div>...loading</div>
       ) : (
@@ -134,7 +134,7 @@ const EditProfile = ({
                   overflow: 'hidden',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}
               >
                 <img
@@ -161,11 +161,11 @@ const EditProfile = ({
 
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile
+  profile: state.profile,
 });
 
 export default connect(mapStateToProps, { createProfile })(EditProfile);

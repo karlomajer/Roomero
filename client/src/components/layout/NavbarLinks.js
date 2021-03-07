@@ -19,42 +19,43 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
     <li>
       <Link to='/profile/me/reservations'>Reservations</Link>
     </li>
-    <li>
-      <div className='dropdown'>
-        <div
-          style={{
-            display: 'inline-block',
-            width: '2.75rem',
-            height: '2.75rem',
-            borderRadius: '100%',
-            overflow: 'hidden',
-          }}
-        >
-          <img
-            src={profileAuth.avatar}
-            className='object-cover cursor-pointer'
-            alt='Avatar'
-          />
-        </div>
-        <span className='pl-3'>{profileAuth.name}</span>
-        <div className='dropdown-content'>
-          <Link to='/profile/me' className='block text-left pl-4 py-2'>
-            Profile
-          </Link>
-          <Link to='/edit-profile' className='block text-left pl-4 py-2'>
-            Settings
-          </Link>
-          <div className='section-line' />
-          <a
-            href=''
-            onClick={() => logout()}
-            className='block text-left pl-4 py-2'
+    {profileAuth && (
+      <li>
+        <div className='dropdown'>
+          <div
+            style={{
+              display: 'inline-block',
+              width: '2.25rem',
+              height: '2.25rem',
+              borderRadius: '100%',
+              overflow: 'hidden',
+            }}
           >
-            Logout
-          </a>
+            <img
+              src={profileAuth.avatar}
+              className='object-cover'
+              alt='Avatar'
+            />
+          </div>
+          <span className='pl-3'>{profileAuth.name}</span>
+          <div className='dropdown-content bg-gray-800 shadow rounded-sm'>
+            <Link to='/profile/me' className='block text-left pl-4 py-2'>
+              Profile
+            </Link>
+            <Link to='/edit-profile' className='block text-left pl-4 py-2'>
+              Settings
+            </Link>
+            <div className='border-b border-gray-700' />
+            <button
+              onClick={() => logout()}
+              className='block w-full text-left pl-4 py-2'
+            >
+              Logout
+            </button>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    )}
   </ul>
 );
 
@@ -78,38 +79,50 @@ const closeHamburger = () => {
 export const AuthLinksMobile = ({ logout, profileAuth }) => (
   <ul className='navbar-links'>
     <li>
-      <Link to='/profile/me' onClick={closeHamburger}>
+      <div>
+        <Link to='/profile/me' onClick={closeHamburger}>
+          <div
+            style={{
+              width: '5.5rem',
+              height: '5.5rem',
+              borderRadius: '100%',
+              overflow: 'hidden',
+              margin: '0 auto',
+              marginBottom: '0.25rem',
+              borderWidth: '5px',
+            }}
+            className='border-secondary-300'
+          >
+            <img
+              src={profileAuth.avatar}
+              className='object-cover cursor-pointer'
+              alt='Avatar'
+            />
+          </div>
+          <div className='text-2xl font-medium'>{profileAuth.name}</div>
+        </Link>
         <div
-          style={{
-            width: '7rem',
-            height: '7rem',
-            borderRadius: '100%',
-            overflow: 'hidden',
-            margin: '0 auto',
-            marginBottom: '-0.75rem',
-          }}
+          className='mt-5 mb-1 bg-accent-500 mx-auto'
+          style={{ width: '65px', height: '3px' }}
         >
-          <img
-            src={profileAuth.avatar}
-            className='object-cover cursor-pointer'
-            alt='Avatar'
-          />
+          {' '}
         </div>
-        <span className='text-2xl font-medium'>{profileAuth.name}</span>
-      </Link>
+      </div>
     </li>
-    <li>
+
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/profile/me/listings' onClick={closeHamburger}>
         Listings
       </Link>
     </li>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/profile/me/reservations' onClick={closeHamburger}>
         Reservations
       </Link>
     </li>
-    <li>
-      <a
+    <li className='text-2xl'>
+      <button
+        style={{ fontWeight: '300' }}
         href=''
         onClick={() => {
           closeHamburger();
@@ -117,7 +130,7 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
         }}
       >
         Logout
-      </a>
+      </button>
     </li>
   </ul>
 );

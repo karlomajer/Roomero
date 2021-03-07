@@ -23,7 +23,7 @@ const Listing = ({
   }, [getListingById, clearListings, match.params.id]);
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {listing === null || loading ? (
         <Spinner className='pt-20' />
       ) : (

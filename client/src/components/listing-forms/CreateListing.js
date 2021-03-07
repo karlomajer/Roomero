@@ -31,10 +31,10 @@ const CreateListing = ({ createListing, history }) => {
     description,
   } = formData;
 
-  const onChange = (e) =>
+  const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
     const _formData = {
       ...formData,
@@ -42,7 +42,7 @@ const CreateListing = ({ createListing, history }) => {
       location: location.split(', '),
       coordinates,
       amenities: Object.keys(checkedAmenities).filter(
-        (amenity) => checkedAmenities[amenity] === true
+        amenity => checkedAmenities[amenity] === true
       ),
       images: uploadData.filePaths,
     };
@@ -64,7 +64,7 @@ const CreateListing = ({ createListing, history }) => {
   const [uploadData, setUploadData] = useState({});
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       <h2 className='section-heading'>Create a new listing</h2>
       <form className='my-10' onSubmit={onSubmit}>
         <div className='form-group'>

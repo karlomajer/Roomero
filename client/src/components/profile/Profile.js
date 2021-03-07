@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { getProfileById, clearProfile } from '../../actions/profile';
 import Spinner from '../utils/Spinner';
 
@@ -18,9 +18,13 @@ const Profile = ({
   }, [getProfileById, clearProfile, match.params.id]);
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {profile === null || loading ? (
-        <Spinner className='pt-20' />
+        match.params.id === 'me' && !auth.loading && profileAuth === null ? (
+          <Redirect to='/' />
+        ) : (
+          <Spinner className='pt-20' />
+        )
       ) : (
         <Fragment>
           <div className='flex flex-col items-center'>

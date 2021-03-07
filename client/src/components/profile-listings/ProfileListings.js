@@ -22,7 +22,7 @@ const ProfileListings = ({
   }, [getListingsHost, clearListings]);
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
       {loading || listings === null ? (
         <Spinner className='pt-20' />
       ) : (

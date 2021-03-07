@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createProfile } from '../../actions/profile';
@@ -60,11 +60,11 @@ const EditProfile = ({
   };
 
   return (
-    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-xl mx-auto mt-20 mb-4 px-4 sm:px-8 md:px-10'>
       {profileAuth === null || loading ? (
         <div>...loading</div>
       ) : (
-        <Fragment>
+        <div className='bg-secondary-200 mt-10 px-6 md:px-10 pt-6 pb-8 rounded-md'>
           <h2 className='section-heading'>Edit Profile</h2>
           <form className='my-10' onSubmit={onSubmit}>
             <div className='form-group'>
@@ -109,11 +109,11 @@ const EditProfile = ({
                 Languages
               </label>
               <div className='flex-break' />
-              <small className='ml-0 md:ml-40 pt-1'>
+              <small className='ml-0 md:ml-40 pt-1 text-gray-500 italic'>
                 Please use comma separated values (eg. English, German, Italian)
               </small>
             </div>
-            <div className='form-group flex-wrap'>
+            <div className='form-group sm:flex-wrap'>
               <FileUpload
                 uploadLocation={'avatars'}
                 files={files}
@@ -138,10 +138,11 @@ const EditProfile = ({
                 }}
               >
                 <img
+                  className='w-full'
                   style={{ height: '-webkit-fill-available' }}
                   id='avatar'
                   src={avatar}
-                  className='object-cover'
+                  className='w-full object-cover'
                   alt='Avatar'
                 />
               </div>
@@ -153,7 +154,7 @@ const EditProfile = ({
               value='Update profile'
             />
           </form>
-        </Fragment>
+        </div>
       )}
     </div>
   );

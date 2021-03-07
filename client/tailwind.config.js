@@ -22,6 +22,9 @@ module.exports = {
       width: {
         '250px': '250px',
       },
+      margin: {
+        30: '7.5rem',
+      },
     },
   },
   variants: {

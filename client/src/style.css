@@ -84,6 +84,10 @@ body {
   z-index: 1;
 }
 
+.dropdown-content > * {
+  transition: all 200ms ease-in-out;
+}
+
 .dropdown-content > *:hover {
   color: #d1d5db;
   @apply bg-accent-500;
@@ -270,7 +274,7 @@ input[type='number'] {
 }
 
 .section-line {
-  @apply border-b border-gray-300;
+  @apply border-b border-secondary-100;
 }
 
 .form-group {
@@ -278,7 +282,7 @@ input[type='number'] {
 }
 
 .form-group .input-label {
-  @apply w-full tracking-wide font-medium order-first;
+  @apply w-full tracking-wide text-gray-400 font-medium order-first;
 }
 
 .form-group .input {
@@ -359,7 +363,7 @@ input[type='number'] {
   }
 
   .form-group .input-half {
-    @apply w-56;
+    @apply w-64;
   }
 
   .form-group .input-full {

@@ -747,6 +747,10 @@ body {
   z-index: 1;
 }
 
+.dropdown-content > * {
+  transition: all 200ms ease-in-out;
+}
+
 .dropdown-content > *:hover {
   color: #d1d5db;
   --bg-opacity: 1;
@@ -1012,8 +1016,8 @@ input[type='number'] {
 .section-line {
   border-bottom-width: 1px;
   --border-opacity: 1;
-  border-color: #e2e8f0;
-  border-color: rgba(226, 232, 240, var(--border-opacity));
+  border-color: #2a3059;
+  border-color: rgba(42, 48, 89, var(--border-opacity));
 }
 
 .form-group {
@@ -1028,6 +1032,9 @@ input[type='number'] {
 .form-group .input-label {
   width: 100%;
   letter-spacing: 0.025em;
+  --text-opacity: 1;
+  color: #cbd5e0;
+  color: rgba(203, 213, 224, var(--text-opacity));
   font-weight: 500;
   -webkit-order: -9999;
           order: -9999;
@@ -14055,6 +14062,10 @@ input[type='number'] {
   margin: 6rem;
 }
 
+.m-30 {
+  margin: 7.5rem;
+}
+
 .m-32 {
   margin: 8rem;
 }
@@ -14283,6 +14294,16 @@ input[type='number'] {
 .mx-24 {
   margin-left: 6rem;
   margin-right: 6rem;
+}
+
+.my-30 {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.mx-30 {
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
 }
 
 .my-32 {
@@ -14743,6 +14764,22 @@ input[type='number'] {
   margin-left: 6rem;
 }
 
+.mt-30 {
+  margin-top: 7.5rem;
+}
+
+.mr-30 {
+  margin-right: 7.5rem;
+}
+
+.mb-30 {
+  margin-bottom: 7.5rem;
+}
+
+.ml-30 {
+  margin-left: 7.5rem;
+}
+
 .mt-32 {
   margin-top: 8rem;
 }
@@ -15195,6 +15232,10 @@ input[type='number'] {
   margin: 6rem;
 }
 
+.first\:m-30:first-child {
+  margin: 7.5rem;
+}
+
 .first\:m-32:first-child {
   margin: 8rem;
 }
@@ -15423,6 +15464,16 @@ input[type='number'] {
 .first\:mx-24:first-child {
   margin-left: 6rem;
   margin-right: 6rem;
+}
+
+.first\:my-30:first-child {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.first\:mx-30:first-child {
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
 }
 
 .first\:my-32:first-child {
@@ -15883,6 +15934,22 @@ input[type='number'] {
   margin-left: 6rem;
 }
 
+.first\:mt-30:first-child {
+  margin-top: 7.5rem;
+}
+
+.first\:mr-30:first-child {
+  margin-right: 7.5rem;
+}
+
+.first\:mb-30:first-child {
+  margin-bottom: 7.5rem;
+}
+
+.first\:ml-30:first-child {
+  margin-left: 7.5rem;
+}
+
 .first\:mt-32:first-child {
   margin-top: 8rem;
 }
@@ -16335,6 +16402,10 @@ input[type='number'] {
   margin: 6rem;
 }
 
+.hover\:m-30:hover {
+  margin: 7.5rem;
+}
+
 .hover\:m-32:hover {
   margin: 8rem;
 }
@@ -16563,6 +16634,16 @@ input[type='number'] {
 .hover\:mx-24:hover {
   margin-left: 6rem;
   margin-right: 6rem;
+}
+
+.hover\:my-30:hover {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.hover\:mx-30:hover {
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
 }
 
 .hover\:my-32:hover {
@@ -17023,6 +17104,22 @@ input[type='number'] {
   margin-left: 6rem;
 }
 
+.hover\:mt-30:hover {
+  margin-top: 7.5rem;
+}
+
+.hover\:mr-30:hover {
+  margin-right: 7.5rem;
+}
+
+.hover\:mb-30:hover {
+  margin-bottom: 7.5rem;
+}
+
+.hover\:ml-30:hover {
+  margin-left: 7.5rem;
+}
+
 .hover\:mt-32:hover {
   margin-top: 8rem;
 }
@@ -17475,6 +17572,10 @@ input[type='number'] {
   margin: 6rem;
 }
 
+.focus\:m-30:focus {
+  margin: 7.5rem;
+}
+
 .focus\:m-32:focus {
   margin: 8rem;
 }
@@ -17703,6 +17804,16 @@ input[type='number'] {
 .focus\:mx-24:focus {
   margin-left: 6rem;
   margin-right: 6rem;
+}
+
+.focus\:my-30:focus {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.focus\:mx-30:focus {
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
 }
 
 .focus\:my-32:focus {
@@ -18161,6 +18272,22 @@ input[type='number'] {
 
 .focus\:ml-24:focus {
   margin-left: 6rem;
+}
+
+.focus\:mt-30:focus {
+  margin-top: 7.5rem;
+}
+
+.focus\:mr-30:focus {
+  margin-right: 7.5rem;
+}
+
+.focus\:mb-30:focus {
+  margin-bottom: 7.5rem;
+}
+
+.focus\:ml-30:focus {
+  margin-left: 7.5rem;
 }
 
 .focus\:mt-32:focus {
@@ -29178,7 +29305,7 @@ input[type='number'] {
   }
 
   .form-group .input-half {
-    width: 14rem;
+    width: 16rem;
   }
 
   .form-group .input-full {
@@ -42201,6 +42328,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .sm\:m-30 {
+    margin: 7.5rem;
+  }
+
   .sm\:m-32 {
     margin: 8rem;
   }
@@ -42429,6 +42560,16 @@ input[type='number'] {
   .sm\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .sm\:my-30 {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:mx-30 {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .sm\:my-32 {
@@ -42889,6 +43030,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .sm\:mt-30 {
+    margin-top: 7.5rem;
+  }
+
+  .sm\:mr-30 {
+    margin-right: 7.5rem;
+  }
+
+  .sm\:mb-30 {
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:ml-30 {
+    margin-left: 7.5rem;
+  }
+
   .sm\:mt-32 {
     margin-top: 8rem;
   }
@@ -43341,6 +43498,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .sm\:first\:m-30:first-child {
+    margin: 7.5rem;
+  }
+
   .sm\:first\:m-32:first-child {
     margin: 8rem;
   }
@@ -43569,6 +43730,16 @@ input[type='number'] {
   .sm\:first\:mx-24:first-child {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .sm\:first\:my-30:first-child {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:first\:mx-30:first-child {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .sm\:first\:my-32:first-child {
@@ -44029,6 +44200,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .sm\:first\:mt-30:first-child {
+    margin-top: 7.5rem;
+  }
+
+  .sm\:first\:mr-30:first-child {
+    margin-right: 7.5rem;
+  }
+
+  .sm\:first\:mb-30:first-child {
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:first\:ml-30:first-child {
+    margin-left: 7.5rem;
+  }
+
   .sm\:first\:mt-32:first-child {
     margin-top: 8rem;
   }
@@ -44481,6 +44668,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .sm\:hover\:m-30:hover {
+    margin: 7.5rem;
+  }
+
   .sm\:hover\:m-32:hover {
     margin: 8rem;
   }
@@ -44709,6 +44900,16 @@ input[type='number'] {
   .sm\:hover\:mx-24:hover {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .sm\:hover\:my-30:hover {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:hover\:mx-30:hover {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .sm\:hover\:my-32:hover {
@@ -45169,6 +45370,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .sm\:hover\:mt-30:hover {
+    margin-top: 7.5rem;
+  }
+
+  .sm\:hover\:mr-30:hover {
+    margin-right: 7.5rem;
+  }
+
+  .sm\:hover\:mb-30:hover {
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:hover\:ml-30:hover {
+    margin-left: 7.5rem;
+  }
+
   .sm\:hover\:mt-32:hover {
     margin-top: 8rem;
   }
@@ -45621,6 +45838,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .sm\:focus\:m-30:focus {
+    margin: 7.5rem;
+  }
+
   .sm\:focus\:m-32:focus {
     margin: 8rem;
   }
@@ -45849,6 +46070,16 @@ input[type='number'] {
   .sm\:focus\:mx-24:focus {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .sm\:focus\:my-30:focus {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:focus\:mx-30:focus {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .sm\:focus\:my-32:focus {
@@ -46307,6 +46538,22 @@ input[type='number'] {
 
   .sm\:focus\:ml-24:focus {
     margin-left: 6rem;
+  }
+
+  .sm\:focus\:mt-30:focus {
+    margin-top: 7.5rem;
+  }
+
+  .sm\:focus\:mr-30:focus {
+    margin-right: 7.5rem;
+  }
+
+  .sm\:focus\:mb-30:focus {
+    margin-bottom: 7.5rem;
+  }
+
+  .sm\:focus\:ml-30:focus {
+    margin-left: 7.5rem;
   }
 
   .sm\:focus\:mt-32:focus {
@@ -70202,6 +70449,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .md\:m-30 {
+    margin: 7.5rem;
+  }
+
   .md\:m-32 {
     margin: 8rem;
   }
@@ -70430,6 +70681,16 @@ input[type='number'] {
   .md\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .md\:my-30 {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:mx-30 {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .md\:my-32 {
@@ -70890,6 +71151,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .md\:mt-30 {
+    margin-top: 7.5rem;
+  }
+
+  .md\:mr-30 {
+    margin-right: 7.5rem;
+  }
+
+  .md\:mb-30 {
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:ml-30 {
+    margin-left: 7.5rem;
+  }
+
   .md\:mt-32 {
     margin-top: 8rem;
   }
@@ -71342,6 +71619,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .md\:first\:m-30:first-child {
+    margin: 7.5rem;
+  }
+
   .md\:first\:m-32:first-child {
     margin: 8rem;
   }
@@ -71570,6 +71851,16 @@ input[type='number'] {
   .md\:first\:mx-24:first-child {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .md\:first\:my-30:first-child {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:first\:mx-30:first-child {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .md\:first\:my-32:first-child {
@@ -72030,6 +72321,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .md\:first\:mt-30:first-child {
+    margin-top: 7.5rem;
+  }
+
+  .md\:first\:mr-30:first-child {
+    margin-right: 7.5rem;
+  }
+
+  .md\:first\:mb-30:first-child {
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:first\:ml-30:first-child {
+    margin-left: 7.5rem;
+  }
+
   .md\:first\:mt-32:first-child {
     margin-top: 8rem;
   }
@@ -72482,6 +72789,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .md\:hover\:m-30:hover {
+    margin: 7.5rem;
+  }
+
   .md\:hover\:m-32:hover {
     margin: 8rem;
   }
@@ -72710,6 +73021,16 @@ input[type='number'] {
   .md\:hover\:mx-24:hover {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .md\:hover\:my-30:hover {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:hover\:mx-30:hover {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .md\:hover\:my-32:hover {
@@ -73170,6 +73491,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .md\:hover\:mt-30:hover {
+    margin-top: 7.5rem;
+  }
+
+  .md\:hover\:mr-30:hover {
+    margin-right: 7.5rem;
+  }
+
+  .md\:hover\:mb-30:hover {
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:hover\:ml-30:hover {
+    margin-left: 7.5rem;
+  }
+
   .md\:hover\:mt-32:hover {
     margin-top: 8rem;
   }
@@ -73622,6 +73959,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .md\:focus\:m-30:focus {
+    margin: 7.5rem;
+  }
+
   .md\:focus\:m-32:focus {
     margin: 8rem;
   }
@@ -73850,6 +74191,16 @@ input[type='number'] {
   .md\:focus\:mx-24:focus {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .md\:focus\:my-30:focus {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:focus\:mx-30:focus {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .md\:focus\:my-32:focus {
@@ -74308,6 +74659,22 @@ input[type='number'] {
 
   .md\:focus\:ml-24:focus {
     margin-left: 6rem;
+  }
+
+  .md\:focus\:mt-30:focus {
+    margin-top: 7.5rem;
+  }
+
+  .md\:focus\:mr-30:focus {
+    margin-right: 7.5rem;
+  }
+
+  .md\:focus\:mb-30:focus {
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:focus\:ml-30:focus {
+    margin-left: 7.5rem;
   }
 
   .md\:focus\:mt-32:focus {
@@ -98203,6 +98570,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .lg\:m-30 {
+    margin: 7.5rem;
+  }
+
   .lg\:m-32 {
     margin: 8rem;
   }
@@ -98431,6 +98802,16 @@ input[type='number'] {
   .lg\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .lg\:my-30 {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:mx-30 {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .lg\:my-32 {
@@ -98891,6 +99272,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .lg\:mt-30 {
+    margin-top: 7.5rem;
+  }
+
+  .lg\:mr-30 {
+    margin-right: 7.5rem;
+  }
+
+  .lg\:mb-30 {
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:ml-30 {
+    margin-left: 7.5rem;
+  }
+
   .lg\:mt-32 {
     margin-top: 8rem;
   }
@@ -99343,6 +99740,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .lg\:first\:m-30:first-child {
+    margin: 7.5rem;
+  }
+
   .lg\:first\:m-32:first-child {
     margin: 8rem;
   }
@@ -99571,6 +99972,16 @@ input[type='number'] {
   .lg\:first\:mx-24:first-child {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .lg\:first\:my-30:first-child {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:first\:mx-30:first-child {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .lg\:first\:my-32:first-child {
@@ -100031,6 +100442,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .lg\:first\:mt-30:first-child {
+    margin-top: 7.5rem;
+  }
+
+  .lg\:first\:mr-30:first-child {
+    margin-right: 7.5rem;
+  }
+
+  .lg\:first\:mb-30:first-child {
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:first\:ml-30:first-child {
+    margin-left: 7.5rem;
+  }
+
   .lg\:first\:mt-32:first-child {
     margin-top: 8rem;
   }
@@ -100483,6 +100910,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .lg\:hover\:m-30:hover {
+    margin: 7.5rem;
+  }
+
   .lg\:hover\:m-32:hover {
     margin: 8rem;
   }
@@ -100711,6 +101142,16 @@ input[type='number'] {
   .lg\:hover\:mx-24:hover {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .lg\:hover\:my-30:hover {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:hover\:mx-30:hover {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .lg\:hover\:my-32:hover {
@@ -101171,6 +101612,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .lg\:hover\:mt-30:hover {
+    margin-top: 7.5rem;
+  }
+
+  .lg\:hover\:mr-30:hover {
+    margin-right: 7.5rem;
+  }
+
+  .lg\:hover\:mb-30:hover {
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:hover\:ml-30:hover {
+    margin-left: 7.5rem;
+  }
+
   .lg\:hover\:mt-32:hover {
     margin-top: 8rem;
   }
@@ -101623,6 +102080,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .lg\:focus\:m-30:focus {
+    margin: 7.5rem;
+  }
+
   .lg\:focus\:m-32:focus {
     margin: 8rem;
   }
@@ -101851,6 +102312,16 @@ input[type='number'] {
   .lg\:focus\:mx-24:focus {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .lg\:focus\:my-30:focus {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:focus\:mx-30:focus {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .lg\:focus\:my-32:focus {
@@ -102309,6 +102780,22 @@ input[type='number'] {
 
   .lg\:focus\:ml-24:focus {
     margin-left: 6rem;
+  }
+
+  .lg\:focus\:mt-30:focus {
+    margin-top: 7.5rem;
+  }
+
+  .lg\:focus\:mr-30:focus {
+    margin-right: 7.5rem;
+  }
+
+  .lg\:focus\:mb-30:focus {
+    margin-bottom: 7.5rem;
+  }
+
+  .lg\:focus\:ml-30:focus {
+    margin-left: 7.5rem;
   }
 
   .lg\:focus\:mt-32:focus {
@@ -126204,6 +126691,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .xl\:m-30 {
+    margin: 7.5rem;
+  }
+
   .xl\:m-32 {
     margin: 8rem;
   }
@@ -126432,6 +126923,16 @@ input[type='number'] {
   .xl\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .xl\:my-30 {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:mx-30 {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .xl\:my-32 {
@@ -126892,6 +127393,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .xl\:mt-30 {
+    margin-top: 7.5rem;
+  }
+
+  .xl\:mr-30 {
+    margin-right: 7.5rem;
+  }
+
+  .xl\:mb-30 {
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:ml-30 {
+    margin-left: 7.5rem;
+  }
+
   .xl\:mt-32 {
     margin-top: 8rem;
   }
@@ -127344,6 +127861,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .xl\:first\:m-30:first-child {
+    margin: 7.5rem;
+  }
+
   .xl\:first\:m-32:first-child {
     margin: 8rem;
   }
@@ -127572,6 +128093,16 @@ input[type='number'] {
   .xl\:first\:mx-24:first-child {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .xl\:first\:my-30:first-child {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:first\:mx-30:first-child {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .xl\:first\:my-32:first-child {
@@ -128032,6 +128563,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .xl\:first\:mt-30:first-child {
+    margin-top: 7.5rem;
+  }
+
+  .xl\:first\:mr-30:first-child {
+    margin-right: 7.5rem;
+  }
+
+  .xl\:first\:mb-30:first-child {
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:first\:ml-30:first-child {
+    margin-left: 7.5rem;
+  }
+
   .xl\:first\:mt-32:first-child {
     margin-top: 8rem;
   }
@@ -128484,6 +129031,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .xl\:hover\:m-30:hover {
+    margin: 7.5rem;
+  }
+
   .xl\:hover\:m-32:hover {
     margin: 8rem;
   }
@@ -128712,6 +129263,16 @@ input[type='number'] {
   .xl\:hover\:mx-24:hover {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .xl\:hover\:my-30:hover {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:hover\:mx-30:hover {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .xl\:hover\:my-32:hover {
@@ -129172,6 +129733,22 @@ input[type='number'] {
     margin-left: 6rem;
   }
 
+  .xl\:hover\:mt-30:hover {
+    margin-top: 7.5rem;
+  }
+
+  .xl\:hover\:mr-30:hover {
+    margin-right: 7.5rem;
+  }
+
+  .xl\:hover\:mb-30:hover {
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:hover\:ml-30:hover {
+    margin-left: 7.5rem;
+  }
+
   .xl\:hover\:mt-32:hover {
     margin-top: 8rem;
   }
@@ -129624,6 +130201,10 @@ input[type='number'] {
     margin: 6rem;
   }
 
+  .xl\:focus\:m-30:focus {
+    margin: 7.5rem;
+  }
+
   .xl\:focus\:m-32:focus {
     margin: 8rem;
   }
@@ -129852,6 +130433,16 @@ input[type='number'] {
   .xl\:focus\:mx-24:focus {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .xl\:focus\:my-30:focus {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:focus\:mx-30:focus {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
   }
 
   .xl\:focus\:my-32:focus {
@@ -130310,6 +130901,22 @@ input[type='number'] {
 
   .xl\:focus\:ml-24:focus {
     margin-left: 6rem;
+  }
+
+  .xl\:focus\:mt-30:focus {
+    margin-top: 7.5rem;
+  }
+
+  .xl\:focus\:mr-30:focus {
+    margin-right: 7.5rem;
+  }
+
+  .xl\:focus\:mb-30:focus {
+    margin-bottom: 7.5rem;
+  }
+
+  .xl\:focus\:ml-30:focus {
+    margin-left: 7.5rem;
   }
 
   .xl\:focus\:mt-32:focus {

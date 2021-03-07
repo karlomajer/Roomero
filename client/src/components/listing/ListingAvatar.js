@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
   return (
-    <div className='md:pr-4 mb-0 mt-6 md:mt-0'>
+    <div className='ml-4 md:pr-4 mb-0 mt-6 md:mt-0'>
       <Link to={`/profile/${_id}`}>
         <div
           className='mx-auto cursor-pointer'
@@ -15,7 +15,7 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
             overflow: 'hidden',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
           }}
         >
           <img
@@ -25,7 +25,7 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
             alt='Avatar'
           />
         </div>
-        <h3 className='font-medium text-sm text-center leading-tight pt-2 text-gray-700'>
+        <h3 className='font-medium text-sm text-center leading-tight pt-2 text-gray-600'>
           {name.split(' ')[0]}
         </h3>
       </Link>
@@ -34,7 +34,7 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
 };
 
 ListingAvatar.propTypes = {
-  owner: PropTypes.object.isRequired
+  owner: PropTypes.object.isRequired,
 };
 
 export default ListingAvatar;

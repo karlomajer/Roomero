@@ -43,7 +43,7 @@ const ListingReservation = ({
   // Find all reserved dates
   useEffect(() => {
     let days = [];
-    reservations.forEach((reservation) => {
+    reservations.forEach(reservation => {
       const range = moment.range(reservation.startDate, reservation.endDate);
       days = [...days, ...Array.from(range.by('days'))];
     });
@@ -54,7 +54,7 @@ const ListingReservation = ({
   useEffect(() => {
     if (startDate) {
       const datesAfterStart = blockedDays.filter(
-        (day) => day > startDate.toDate()
+        day => day > startDate.toDate()
       );
       setBlockDaysAfter(new Date(Math.min.apply(null, datesAfterStart)));
     }
@@ -62,14 +62,13 @@ const ListingReservation = ({
 
   const mobile = window.matchMedia('(max-width: 767px)');
 
-  const handleDayBlock = (day) =>
-    blockedDays.some((blockedDay) => day.isSame(blockedDay, 'day')) ||
+  const handleDayBlock = day =>
+    blockedDays.some(blockedDay => day.isSame(blockedDay, 'day')) ||
     day.toDate() < Date.now();
 
-  const handleOutsideRange = (day) =>
-    startDate && day.toDate() >= blockDaysAfter;
+  const handleOutsideRange = day => startDate && day.toDate() >= blockDaysAfter;
 
-  const submitReservation = (e) => {
+  const submitReservation = e => {
     !startDate && setFocus('startDate');
     startDate && !endDate && setFocus('endDate');
     e.target.blur(); // Remove focus from button
@@ -83,8 +82,8 @@ const ListingReservation = ({
   };
 
   return (
-    <div className='pt-6 border-t border-t-gray-300 md:p-5 md:border md:border-gray-300'>
-      <h2 className='text-lg font-semibold pb-3 md:border-b md:border-b-gray-300 '>
+    <div className='my-4 md:mt-3 p-6 bg-secondary-300 rounded-md'>
+      <h2 className='text-lg font-semibold pb-3 md:border-b md:border-secondary-100 '>
         Add dates for prices
       </h2>
       <div className='font-semibold text-sm md:pt-3'>Dates</div>
@@ -100,12 +99,12 @@ const ListingReservation = ({
             setNightsSelected(endDate.diff(startDate, 'days'));
         }}
         focusedInput={focus}
-        onFocusChange={(focus) => setFocus(focus)}
+        onFocusChange={focus => setFocus(focus)}
         showClearDates={true}
         numberOfMonths={1}
         withFullScreenPortal={mobile.matches ? true : false}
-        isDayBlocked={(day) => handleDayBlock(day)}
-        isOutsideRange={(day) => handleOutsideRange(day)}
+        isDayBlocked={day => handleDayBlock(day)}
+        isOutsideRange={day => handleOutsideRange(day)}
       />
       <div className='font-semibold text-sm mt-4'>Guests</div>
       <InputNumber
@@ -113,12 +112,12 @@ const ListingReservation = ({
         min={1}
         max={maxGuests}
         value={numberOfGuests}
-        onChange={(val) =>
+        onChange={val =>
           numberOfGuests < 1
             ? setNumberOfGuests(1)
             : setNumberOfGuests(Number(val.toString().replace(/\D/g, '')))
         }
-        formatter={(val) => val.toString().replace(/\D/g, '')}
+        formatter={val => val.toString().replace(/\D/g, '')}
       />
       {startDate && endDate && (
         <div className='mt-5' style={{ fontSize: '0.925rem' }}>
@@ -141,7 +140,7 @@ const ListingReservation = ({
         </div>
       )}
       <button
-        onClick={(e) => submitReservation(e)}
+        onClick={e => submitReservation(e)}
         className='btn btn-primary block w-full mt-8'
       >
         {startDate && endDate ? 'Reserve' : 'Check Availability'}

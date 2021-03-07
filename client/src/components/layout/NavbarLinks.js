@@ -23,29 +23,34 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
       <li>
         <div className='dropdown'>
           <div
+            className='border-secondary-300'
             style={{
               display: 'inline-block',
-              width: '2.25rem',
-              height: '2.25rem',
+              width: '2.5rem',
+              height: '2.5rem',
               borderRadius: '100%',
               overflow: 'hidden',
+              borderWidth: '4px',
             }}
           >
             <img
               src={profileAuth.avatar}
-              className='object-cover'
+              className='w-full object-cover'
               alt='Avatar'
             />
           </div>
           <span className='pl-3'>{profileAuth.name}</span>
-          <div className='dropdown-content bg-gray-800 shadow rounded-sm'>
+          <div
+            className='dropdown-content bg-gray-800 shadow rounded-sm'
+            style={{ left: '-20px' }}
+          >
             <Link to='/profile/me' className='block text-left pl-4 py-2'>
               Profile
             </Link>
             <Link to='/edit-profile' className='block text-left pl-4 py-2'>
               Settings
             </Link>
-            <div className='border-b border-gray-700' />
+            <div className='border-b border-accent-500' />
             <button
               onClick={() => logout()}
               className='block w-full text-left pl-4 py-2'
@@ -95,7 +100,7 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
           >
             <img
               src={profileAuth.avatar}
-              className='object-cover cursor-pointer'
+              className='w-full object-cover cursor-pointer'
               alt='Avatar'
             />
           </div>

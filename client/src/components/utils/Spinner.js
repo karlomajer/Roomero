@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as SpinnerIcon } from '../../img/spinner.svg';
+import PropTypes from 'prop-types';
 
 const Spinner = ({ className }) => {
   return (
@@ -7,6 +8,10 @@ const Spinner = ({ className }) => {
       <SpinnerIcon />
     </div>
   );
+};
+
+Spinner.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Spinner;

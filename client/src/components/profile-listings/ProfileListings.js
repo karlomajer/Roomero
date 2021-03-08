@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   getListingsHost,
@@ -29,7 +28,7 @@ const ProfileListings = ({
         <div className='bg-secondary-200 px-8 py-6 lg:-mx-8 rounded-md'>
           <h1 className='section-heading'>My Listings</h1>
           {listings.length === 0 ? (
-            <div className='my-10 text-md italic'>
+            <div className='my-10 text-md italic text-gray-500'>
               You do not have any listings.
             </div>
           ) : (

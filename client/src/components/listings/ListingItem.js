@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Truncate from 'react-truncate';
 
 const ListingItem = ({
   listing: { _id, title, propertyType, maxGuests, pricePerNight, images },
@@ -26,9 +27,13 @@ const ListingItem = ({
               <span> · </span>
               {maxGuests} {maxGuests === 1 ? 'guest' : 'guests'}
             </div>
-            <h2 className='mt-1 inline-block text-lg font-medium text-gray-50 leading-tight'>
+            <Truncate
+              className='mt-1 inline-block text-lg font-medium text-gray-50 leading-tight'
+              lines={2}
+              ellipsis={<span>...</span>}
+            >
               {title}
-            </h2>
+            </Truncate>
           </div>
           <span
             style={{ fontSize: '1.30rem' }}

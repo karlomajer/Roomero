@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getListingById, clearListings } from '../../actions/listing';
@@ -38,9 +38,15 @@ const Listing = ({
                 <ListingAvatar owner={listing.owner} />
               </div>
               <div className='section-line my-6' />
-              <ListingDescription description={listing.description} />
-              <div className='section-line my-6' />
-              <ListingAmenities amenities={listing.amenities} />
+              {listing.description && (
+                <Fragment>
+                  <ListingDescription description={listing.description} />
+                  <div className='section-line my-6' />
+                </Fragment>
+              )}
+              {listing.amenities && (
+                <ListingAmenities amenities={listing.amenities} />
+              )}
             </div>
             <div className='reservation'>
               <ListingReservation
@@ -52,7 +58,10 @@ const Listing = ({
               />
             </div>
             <div className='location'>
-              <div className='section-line mt-2 mb-6' />
+              {listing.description ||
+                (listing.amenities && (
+                  <div className='section-line mt-2 mb-6' />
+                ))}
               <ListingLocation coordinates={listing.coordinates} />
             </div>
           </div>

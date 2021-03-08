@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
   return (
     <div className='ml-4 md:pr-4 mb-0 mt-6 md:mt-2'>
-      <Link to={`/profile/${_id}`}>
+      <Link
+        to={`/profile/${_id}`}
+        className='text-gray-600 hover:text-accent-500 transition-colors duration-150'
+      >
         <div
           className='mx-auto cursor-pointer'
           style={{
@@ -25,7 +28,7 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
             alt='Avatar'
           />
         </div>
-        <h3 className='font-medium text-sm text-center leading-tight pt-2 text-gray-600'>
+        <h3 className='font-medium text-sm text-center leading-tight pt-2'>
           {name.split(' ')[0]}
         </h3>
       </Link>

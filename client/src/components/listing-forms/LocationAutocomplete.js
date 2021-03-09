@@ -24,7 +24,7 @@ const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
         searchOptions={searchOptions}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className='form-group flex-wrap bg-secondary-300 rounded-md shadow'>
+          <div className='form-group flex-wrap'>
             {/* As per documentation, an input which gets its props from getInputProps function needs to be included and it's also possible to pass in additional proprs to that function, like placeholder */}
             <input
               {...getInputProps({

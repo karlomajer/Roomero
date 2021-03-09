@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -15,8 +15,11 @@ const FileUpload = ({
     console.log(e.target.files);
   };
 
-  const onSubmit = async e => {
-    e.preventDefault();
+  useEffect(() => {
+    files.length > 0 && onSubmit();
+  }, [files]);
+
+  const onSubmit = async () => {
     const formData = new FormData();
     files.forEach(file => {
       formData.append('file', file);
@@ -59,12 +62,6 @@ const FileUpload = ({
         required={required}
       />
       <div className='flex-break' />
-      <button
-        className='btn bg-secondary-300 text-accent-500 border-none order-last ml-0 md:ml-40 mt-5'
-        onClick={onSubmit}
-      >
-        Upload
-      </button>
     </Fragment>
   );
 };

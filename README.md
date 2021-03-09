@@ -1,4 +1,4 @@
-### [Live Demo](https://www.google.com)
+### [Live Demo](https://roomero-v2.herokuapp.com/)
 
 ## About
 
@@ -12,7 +12,8 @@ Inside the project's root folder, run:
 $ npm run setup
 ```
 
-This will install all of the dependencies and build the development Tailwind CSS. After that's done, start the frontend and backend server with:
+This will install all of the dependencies and build the development Tailwind CSS.<br /><br />
+After that's done, rename `example-default.json` inside the `/config` folder to `default.json`, add your MongoDB URI and JWT secret and finally, start the frontend and backend server with:
 
 ```console
 $ npm run dev

@@ -1,19 +1,20 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createProfile } from '../../actions/profile';
 import FileUpload from '../utils/FileUpload';
+import Spinner from '../utils/Spinner';
 
 const EditProfile = ({
   history,
   createProfile,
-  profile: { profileAuth, loading }
+  profile: { profileAuth, loading },
 }) => {
   const [formData, setFormData] = useState({
     bio: '',
     location: '',
     languages: [],
-    avatar: []
+    avatar: [],
   });
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const EditProfile = ({
           loading || !profileAuth.languages
             ? ''
             : profileAuth.languages.join(', '),
-        avatar: loading || !profileAuth.avatar ? '' : profileAuth.avatar
+        avatar: loading || !profileAuth.avatar ? '' : profileAuth.avatar,
       });
     }
   }, [loading, profileAuth]);
@@ -54,19 +55,19 @@ const EditProfile = ({
         avatar !== uploadData.filePaths &&
         uploadData.filePaths !== undefined &&
         avatar,
-      avatar: uploadData.filePaths
+      avatar: uploadData.filePaths,
     };
     createProfile(_formData, history, true);
   };
 
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-xl mx-auto mt-20 mb-4 px-4 sm:px-8 md:px-10'>
       {profileAuth === null || loading ? (
-        <div>...loading</div>
+        <Spinner className='pt-20' />
       ) : (
-        <Fragment>
+        <div className='bg-secondary-200 mt-10 px-6 md:px-10 py-6 rounded-md'>
           <h2 className='section-heading'>Edit Profile</h2>
-          <form className='my-10' onSubmit={onSubmit}>
+          <form className='mt-10' onSubmit={onSubmit}>
             <div className='form-group'>
               <input
                 id='bio'
@@ -109,11 +110,11 @@ const EditProfile = ({
                 Languages
               </label>
               <div className='flex-break' />
-              <small className='ml-0 md:ml-40 pt-1'>
+              <small className='ml-0 md:ml-40 pt-1 text-gray-500 italic'>
                 Please use comma separated values (eg. English, German, Italian)
               </small>
             </div>
-            <div className='form-group flex-wrap'>
+            <div className='form-group sm:flex-wrap'>
               <FileUpload
                 uploadLocation={'avatars'}
                 files={files}
@@ -134,14 +135,15 @@ const EditProfile = ({
                   overflow: 'hidden',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}
               >
                 <img
+                  className='h-full w-full'
                   style={{ height: '-webkit-fill-available' }}
                   id='avatar'
                   src={avatar}
-                  className='object-cover'
+                  className='w-full object-cover'
                   alt='Avatar'
                 />
               </div>
@@ -153,7 +155,7 @@ const EditProfile = ({
               value='Update profile'
             />
           </form>
-        </Fragment>
+        </div>
       )}
     </div>
   );
@@ -161,11 +163,11 @@ const EditProfile = ({
 
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile
+  profile: state.profile,
 });
 
 export default connect(mapStateToProps, { createProfile })(EditProfile);

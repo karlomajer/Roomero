@@ -46,7 +46,7 @@ router.post('/', [auth], async (req, res) => {
     // Split languages by comma into array and remove all whitespace
     profileFields.languages = languages
       .split(',')
-      .map((language) => language.trim());
+      .map(language => language.trim());
   } else {
     profileFields.languages = [];
   }
@@ -61,10 +61,12 @@ router.post('/', [auth], async (req, res) => {
         { new: true } // Set new to true to return document after the update is applied (to the profile variable, so we can use it later)
       );
 
-      if (previousAvatar) {
+      console.log('previous avatar was');
+      console.log(previousAvatar);
+      if (previousAvatar && !previousAvatar.endsWith('default.png')) {
         fs.unlink(
           `${path.dirname(require.main.filename)}${previousAvatar}`,
-          (err) => {
+          err => {
             if (err) throw err;
           }
         );

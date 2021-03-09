@@ -5,13 +5,13 @@ const ListingDescription = ({ description }) => {
   return (
     <div>
       <h2 className='text-xl font-semibold mb-2'>Description</h2>
-      <p>{description}</p>
+      <p className='text-gray-400'>{description}</p>
     </div>
   );
 };
 
 ListingDescription.propTypes = {
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 };
 
 export default ListingDescription;

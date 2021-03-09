@@ -39,7 +39,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, profile, logout }) => {
   const hamburgerMenu = (
     <div id='hamburger-menu' className='overlay h-0'>
       <div className='overlay-content'>
-        {!loading && !profile.loading && isAuthenticated ? (
+        {!loading &&
+        !profile.loading &&
+        isAuthenticated &&
+        profile?.profileAuth ? (
           <AuthLinksMobile logout={logout} profileAuth={profile.profileAuth} />
         ) : (
           <GuestLinksMobile />
@@ -49,8 +52,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, profile, logout }) => {
   );
 
   return (
-    <nav className='navbar border-b border-gray-200' style={{ zIndex: '1' }}>
-      <h1 className='text-2xl font-bold text-accent-500'>
+    <nav
+      className='fixed flex justify-between items-center w-full top-0 py-1 px-8 bg-secondary-200 border-b border-secondary-100'
+      style={{ zIndex: '1' }}
+    >
+      <h1 className='text-2xl font-bold text-accent-500 hover:text-accent-400 transition-colors duration-300'>
         <Link
           to='/'
           onClick={() =>
@@ -71,7 +77,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, profile, logout }) => {
         </Fragment>
       ) : (
         <Fragment>
-          {!loading && !profile.loading && isAuthenticated ? (
+          {!loading &&
+          !profile.loading &&
+          isAuthenticated &&
+          profile?.profileAuth ? (
             <AuthLinksDesktop
               logout={logout}
               profileAuth={profile.profileAuth}

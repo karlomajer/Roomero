@@ -6,6 +6,8 @@
 
 html {
   font-size: 100%;
+  min-height: 100%;
+  @apply flex flex-col;
 }
 
 /* purgecss start ignore */
@@ -15,8 +17,13 @@ html {
 
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #fff;
-  @apply text-gray-900;
+  height: 100%;
+  @apply flex flex-col flex-grow text-gray-50 bg-secondary-300;
+}
+
+#root {
+  height: 100%;
+  @apply flex flex-col flex-grow;
 }
 
 /* Hover effects go here to avoid having them on phones and tablets */
@@ -52,12 +59,8 @@ body {
   min-height: calc(100vh - 200px);
 }
 
-.navbar {
-  @apply fixed flex justify-between items-center w-full top-0 py-1 px-8 bg-white;
-}
-
 .navbar-links {
-  @apply flex text-center justify-center;
+  @apply flex text-center justify-center text-gray-400;
 }
 
 .navbar-links > li {
@@ -68,12 +71,12 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  @apply pb-4 -mb-4;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fdfdfd;
   top: 44px;
   min-width: 155px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -81,8 +84,13 @@ body {
   z-index: 1;
 }
 
-.dropdown-content > a:hover {
-  background-color: #ededed;
+.dropdown-content > * {
+  transition: all 200ms ease-in-out;
+}
+
+.dropdown-content > *:hover {
+  color: #d1d5db;
+  @apply bg-accent-500;
 }
 
 .dropdown:hover .dropdown-content {
@@ -104,19 +112,19 @@ body {
 
 .hamburger:before,
 .hamburger:after {
-  background-color: #000000;
   content: '';
   display: block;
   height: 4px;
   transition: all 200ms ease-in-out;
+  @apply bg-gray-400;
 }
 .hamburger:before {
-  box-shadow: 0 10px 0 #000000;
+  box-shadow: 0 10px 0 #cbd5e0;
   margin-bottom: 16px;
 }
 
 .hamburger-open:before {
-  box-shadow: 0 0 0 #000000;
+  box-shadow: 0 0 0 #cbd5e0;
   transform: translateY(10px) rotate(45deg);
 }
 
@@ -131,9 +139,9 @@ body {
   z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: #fff;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay */
+  @apply bg-secondary-200;
 }
 
 /* Position the content inside the overlay */
@@ -149,7 +157,6 @@ body {
 /* The navigation links inside the overlay */
 .overlay a {
   text-decoration: none;
-  font-size: 2.5rem;
   transition: 0.15s;
 }
 
@@ -261,11 +268,13 @@ input[type='number'] {
 }
 
 .section-heading {
-  @apply text-4xl inline-block border-solid border-b-4 border-accent-500;
+  border-bottom-width: 3px;
+  font-size: 1.785rem;
+  @apply inline-block border-solid border-accent-500 leading-tight pb-2;
 }
 
 .section-line {
-  @apply border-b border-gray-300;
+  @apply border-b border-secondary-100;
 }
 
 .form-group {
@@ -273,11 +282,11 @@ input[type='number'] {
 }
 
 .form-group .input-label {
-  @apply w-full tracking-wide font-medium order-first;
+  @apply w-full tracking-wide text-gray-400 font-medium order-first;
 }
 
 .form-group .input {
-  @apply w-full p-2 bg-accent-100 rounded-md border-2 border-transparent;
+  @apply w-full p-2 bg-secondary-300 rounded-md border-2 border-transparent;
 }
 
 .form-group .input::-webkit-input-placeholder {
@@ -297,7 +306,7 @@ input[type='number'] {
 }
 
 .form-group .input:focus {
-  @apply outline-none bg-white border-accent-400;
+  @apply outline-none border-accent-500;
 }
 
 .listings-grid {
@@ -341,6 +350,10 @@ input[type='number'] {
 
 /* Medium (md) */
 @media (min-width: 768px) {
+  .section-heading {
+    @apply text-4xl;
+  }
+
   .form-group {
     @apply flex-row items-center;
   }
@@ -350,7 +363,7 @@ input[type='number'] {
   }
 
   .form-group .input-half {
-    @apply w-56;
+    @apply w-64;
   }
 
   .form-group .input-full {

@@ -60,7 +60,7 @@ const FileUpload = ({
       />
       <div className='flex-break' />
       <button
-        className='btn btn-light order-last ml-0 md:ml-40 mt-5'
+        className='btn bg-secondary-300 text-accent-500 border-none order-last ml-0 md:ml-40 mt-5'
         onClick={onSubmit}
       >
         Upload

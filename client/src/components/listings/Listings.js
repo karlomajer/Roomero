@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getListings, clearListings } from '../../actions/listing';
@@ -25,21 +25,6 @@ const Listings = ({
     return () => clearListings();
   }, [getListings, clearListings]);
 
-  useEffect(() => {
-    // Add event listener for submitting location with enter key
-    const listener = e => {
-      if (e.code === 'Enter' || e.code === 'NumpadEnter') {
-        e.target.id === 'location' &&
-          location &&
-          getListings(location.replace(/ /g, '%20'));
-      }
-    };
-    document.addEventListener('keydown', listener);
-    return () => {
-      document.removeEventListener('keydown', listener);
-    };
-  }, [getListings, location]);
-
   // Get current listings
   const indexOfLastListing = currentPage * listingsPerPage;
   const indexOfFirstListing = indexOfLastListing - listingsPerPage;
@@ -50,13 +35,17 @@ const Listings = ({
   const paginate = data => setCurrentPage(data.selected + 1);
 
   return (
-    <div className='container page-wrap max-w-screen-xl mx-auto my-20 px-8 md:py-4'>
+    <div className='container page-wrap flex-grow max-w-screen-xl mx-auto sm:mt-20 mb-4 sm:px-4 sm:px-8 md:px-10'>
       {listings === null || loading ? (
         <Spinner className='pt-20' />
       ) : (
-        <Fragment>
+        <div className='bg-secondary-200 mt-10 px-6 md:px-10 py-6 pt-12 sm:pt-6 sm:rounded-md'>
           <h1 className='section-heading'>Find a place to stay</h1>
-          <LocationAutocomplete location={location} setLocation={setLocation} />
+          <LocationAutocomplete
+            location={location}
+            setLocation={setLocation}
+            getListings={getListings}
+          />
           <div className='listings-grid'>
             {currentListings.map(listing => (
               <ListingItem key={listing._id} listing={listing} />
@@ -79,14 +68,14 @@ const Listings = ({
               pageClassName={'mx-1'}
               activeClassName={'bg-accent-500 text-white rounded-full'}
               previousLinkClassName={
-                'mr-2 p-2 focus:outline-none focus:shadow-outline'
+                'text-gray-500 mr-2 p-2 focus:outline-none focus:shadow-outline'
               }
               nextLinkClassName={
-                'ml-2 p-2 focus:outline-none focus:shadow-outline'
+                'text-gray-500 ml-2 p-2 focus:outline-none focus:shadow-outline'
               }
             />
           )}
-        </Fragment>
+        </div>
       )}
     </div>
   );

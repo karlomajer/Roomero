@@ -19,47 +19,56 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
     <li>
       <Link to='/profile/me/reservations'>Reservations</Link>
     </li>
-    <li>
-      <div className='dropdown'>
-        <div
-          style={{
-            display: 'inline-block',
-            width: '2.75rem',
-            height: '2.75rem',
-            borderRadius: '100%',
-            overflow: 'hidden',
-          }}
-        >
-          <img
-            src={profileAuth.avatar}
-            className='object-cover cursor-pointer'
-            alt='Avatar'
-          />
-        </div>
-        <span className='pl-3'>{profileAuth.name}</span>
-        <div className='dropdown-content'>
-          <Link to='/profile/me' className='block text-left pl-4 py-2'>
-            Profile
-          </Link>
-          <Link to='/edit-profile' className='block text-left pl-4 py-2'>
-            Settings
-          </Link>
-          <div className='section-line' />
-          <a
-            href=''
-            onClick={() => logout()}
-            className='block text-left pl-4 py-2'
+    {profileAuth && (
+      <li>
+        <div className='dropdown'>
+          <div
+            className='border-secondary-300'
+            style={{
+              display: 'inline-block',
+              width: '2.75rem',
+              height: '2.75rem',
+              borderRadius: '100%',
+              overflow: 'hidden',
+              borderWidth: '4px',
+            }}
           >
-            Logout
-          </a>
+            <img
+              src={profileAuth.avatar}
+              className='h-full w-full object-cover'
+              alt='Avatar'
+            />
+          </div>
+          <span className='pl-3'>{profileAuth.name}</span>
+          <div
+            className='dropdown-content bg-gray-800 shadow rounded-sm'
+            style={{ left: '-20px' }}
+          >
+            <Link
+              to='/profile/me'
+              className='block text-left pl-4 py-2 rounded-tl-sm rounded-tr-sm'
+            >
+              Profile
+            </Link>
+            <Link to='/edit-profile' className='block text-left pl-4 py-2'>
+              Settings
+            </Link>
+            <div className='border-b border-accent-500' />
+            <button
+              onClick={() => logout()}
+              className='block w-full text-left pl-4 py-2 rounded-bl-sm rounded-br-sm'
+            >
+              Logout
+            </button>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    )}
   </ul>
 );
 
 export const GuestLinksDesktop = () => (
-  <ul className='navbar-links' style={{ padding: '0.62rem 0' }}>
+  <ul className='navbar-links items-center' style={{ padding: '0.62rem 0' }}>
     <li>
       <Link to='/register'>Register</Link>
     </li>
@@ -78,38 +87,55 @@ const closeHamburger = () => {
 export const AuthLinksMobile = ({ logout, profileAuth }) => (
   <ul className='navbar-links'>
     <li>
-      <Link to='/profile/me' onClick={closeHamburger}>
+      <div>
+        <Link to='/profile/me' onClick={closeHamburger}>
+          <div
+            style={{
+              width: '5.5rem',
+              height: '5.5rem',
+              borderRadius: '100%',
+              overflow: 'hidden',
+              margin: '0 auto',
+              marginBottom: '0.25rem',
+              borderWidth: '5px',
+            }}
+            className='border-secondary-300'
+          >
+            <img
+              src={profileAuth.avatar}
+              className='h-full w-full object-cover cursor-pointer'
+              alt='Avatar'
+            />
+          </div>
+          <div className='text-2xl font-medium'>{profileAuth.name}</div>
+        </Link>
         <div
-          style={{
-            width: '7rem',
-            height: '7rem',
-            borderRadius: '100%',
-            overflow: 'hidden',
-            margin: '0 auto',
-            marginBottom: '-0.75rem',
-          }}
+          className='mt-5 mb-1 bg-accent-500 mx-auto'
+          style={{ width: '65px', height: '3px' }}
         >
-          <img
-            src={profileAuth.avatar}
-            className='object-cover cursor-pointer'
-            alt='Avatar'
-          />
+          {' '}
         </div>
-        <span className='text-2xl font-medium'>{profileAuth.name}</span>
+      </div>
+    </li>
+
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
+      <Link to='/new-listing' onClick={closeHamburger}>
+        Create Listing
       </Link>
     </li>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/profile/me/listings' onClick={closeHamburger}>
         Listings
       </Link>
     </li>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/profile/me/reservations' onClick={closeHamburger}>
         Reservations
       </Link>
     </li>
-    <li>
-      <a
+    <li className='text-2xl'>
+      <button
+        style={{ fontWeight: '300' }}
         href=''
         onClick={() => {
           closeHamburger();
@@ -117,19 +143,19 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
         }}
       >
         Logout
-      </a>
+      </button>
     </li>
   </ul>
 );
 
 export const GuestLinksMobile = () => (
   <ul className='navbar-links'>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/register' onClick={closeHamburger}>
         Register
       </Link>
     </li>
-    <li>
+    <li className='text-2xl' style={{ fontWeight: '300' }}>
       <Link to='/login' onClick={closeHamburger}>
         Login
       </Link>

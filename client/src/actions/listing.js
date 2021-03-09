@@ -10,10 +10,11 @@ import {
   RESERVATION_ERROR,
   GET_RESERVATIONS,
   CLEAR_RESERVATIONS,
+  SET_LOADING,
 } from './types';
 
 // Get listings
-export const getListings = (location) => async (dispatch) => {
+export const getListings = location => async dispatch => {
   try {
     let res;
 
@@ -38,7 +39,7 @@ export const getListings = (location) => async (dispatch) => {
 };
 
 // Get Host Listings
-export const getListingsHost = () => async (dispatch) => {
+export const getListingsHost = () => async dispatch => {
   try {
     const res = await axios.get('/api/listings/me');
 
@@ -56,7 +57,7 @@ export const getListingsHost = () => async (dispatch) => {
 };
 
 // Get listing by id
-export const getListingById = (id) => async (dispatch) => {
+export const getListingById = id => async dispatch => {
   try {
     const res = await axios.get(`/api/listings/${id}`);
 
@@ -74,12 +75,12 @@ export const getListingById = (id) => async (dispatch) => {
 };
 
 // Clear listing and listings
-export const clearListings = () => (dispatch) => {
+export const clearListings = () => dispatch => {
   dispatch({ type: CLEAR_LISTING });
 };
 
 // Add listing
-export const createListing = (formData, history) => async (dispatch) => {
+export const createListing = (formData, history) => async dispatch => {
   try {
     const config = {
       headers: {
@@ -96,7 +97,7 @@ export const createListing = (formData, history) => async (dispatch) => {
     const errors = err.response.data.errors;
 
     if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
 
     dispatch({
@@ -107,7 +108,7 @@ export const createListing = (formData, history) => async (dispatch) => {
 };
 
 // Remove listing
-export const removeListing = (id) => async (dispatch) => {
+export const removeListing = id => async dispatch => {
   try {
     await axios.delete(`/api/listings/${id}`);
 
@@ -127,7 +128,7 @@ export const removeListing = (id) => async (dispatch) => {
 };
 
 // Add reservation
-export const addReservation = (formData, history) => async (dispatch) => {
+export const addReservation = (formData, history) => async dispatch => {
   try {
     const config = {
       headers: {
@@ -147,7 +148,7 @@ export const addReservation = (formData, history) => async (dispatch) => {
     const errors = err.response.data.errors;
 
     if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
 
     dispatch(setAlert(err.response.statusText, 'danger'));
@@ -159,8 +160,12 @@ export const addReservation = (formData, history) => async (dispatch) => {
 };
 
 // Get guests reservations
-export const getGuestReservations = () => async (dispatch) => {
+export const getGuestReservations = () => async dispatch => {
   try {
+    dispatch({
+      type: SET_LOADING,
+    });
+
     const res = await axios.get('/api/listings/reservation/me');
 
     dispatch({
@@ -177,8 +182,12 @@ export const getGuestReservations = () => async (dispatch) => {
 };
 
 // Get reservations by listing id
-export const getListingReservations = (id) => async (dispatch) => {
+export const getListingReservations = id => async dispatch => {
   try {
+    dispatch({
+      type: SET_LOADING,
+    });
+
     const res = await axios.get(`/api/listings/${id}/reservation`);
 
     dispatch({
@@ -195,7 +204,7 @@ export const getListingReservations = (id) => async (dispatch) => {
 };
 
 // Remove reservation
-export const removeReservation = (id) => async (dispatch) => {
+export const removeReservation = id => async dispatch => {
   try {
     await axios.delete(`/api/listings/reservation/${id}`);
 
@@ -215,6 +224,6 @@ export const removeReservation = (id) => async (dispatch) => {
 };
 
 // Clear reservations
-export const clearReservations = () => (dispatch) => {
+export const clearReservations = () => dispatch => {
   dispatch({ type: CLEAR_RESERVATIONS });
 };

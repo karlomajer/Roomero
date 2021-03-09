@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
@@ -12,26 +12,26 @@ const ListingItemReservations = ({
   match,
   getListingReservations,
   clearReservations,
-  listing: { reservations, loading },
+  listing,
 }) => {
   useEffect(() => {
     getListingReservations(match.params.id);
     return () => clearReservations();
   }, [getListingReservations, clearReservations, match.params.id]);
   return (
-    <div className='container page-wrap max-w-screen-lg mx-auto my-20 px-8 md:py-4'>
-      {loading ? (
+    <div className='container page-wrap flex-grow max-w-screen-lg mx-auto mt-30 mb-4 sm:px-8'>
+      {listing.loading || listing?.reservations === null ? (
         <Spinner className='pt-20' />
       ) : (
-        <Fragment>
+        <div className='bg-secondary-200 px-8 py-6 lg:-mx-8 sm:rounded-md'>
           <h1 className='section-heading'>Listing Reservations</h1>
-          {reservations.length === 0 ? (
-            <div className='my-10 text-md italic'>
+          {listing.reservations.length === 0 ? (
+            <div className='my-10 text-md italic text-gray-500'>
               You do not have any reservations for this listing.
             </div>
           ) : (
             <div className='flex flex-col my-10'>
-              {reservations.map(reservation => (
+              {listing.reservations.map(reservation => (
                 <ReservationItem
                   key={reservation._id}
                   reservation={reservation}
@@ -40,7 +40,7 @@ const ListingItemReservations = ({
               ))}
             </div>
           )}
-        </Fragment>
+        </div>
       )}
     </div>
   );

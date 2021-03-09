@@ -1,0 +1,8 @@
+.input-container {
+  border-width: 2px;
+  border-color: transparent;
+}
+
+.input-container:focus-within {
+  border-color: #6d75ff;
+}

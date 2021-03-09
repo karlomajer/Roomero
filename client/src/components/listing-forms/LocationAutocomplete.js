@@ -46,11 +46,7 @@ const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
                 };
 
                 const className =
-                'w-full md:w-1/2 p-2 first:border-0 first:rounded-t-md first:mt-4 last:rounded-b-md border-t border-secondary-100 font-medium cursor-pointer';
-
-                return (
-                  <div
-
+                  'w-full md:w-1/2 p-2 first:border-0 first:rounded-t-md first:mt-4 last:rounded-b-md border-t border-secondary-100 font-medium cursor-pointer';
 
                 return (
                   <div

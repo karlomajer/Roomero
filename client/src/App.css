@@ -2219,8 +2219,8 @@ input[type='number'] {
 
 .divide-accent-400 > :not(template) ~ :not(template) {
   --divide-opacity: 1;
-  border-color: #7f9cf5;
-  border-color: rgba(127, 156, 245, var(--divide-opacity));
+  border-color: #7a85ff;
+  border-color: rgba(122, 133, 255, var(--divide-opacity));
 }
 
 .divide-accent-500 > :not(template) ~ :not(template) {
@@ -2978,8 +2978,8 @@ input[type='number'] {
 
 .bg-accent-400 {
   --bg-opacity: 1;
-  background-color: #7f9cf5;
-  background-color: rgba(127, 156, 245, var(--bg-opacity));
+  background-color: #7a85ff;
+  background-color: rgba(122, 133, 255, var(--bg-opacity));
 }
 
 .bg-accent-500 {
@@ -3616,8 +3616,8 @@ input[type='number'] {
 
 .hover\:bg-accent-400:hover {
   --bg-opacity: 1;
-  background-color: #7f9cf5;
-  background-color: rgba(127, 156, 245, var(--bg-opacity));
+  background-color: #7a85ff;
+  background-color: rgba(122, 133, 255, var(--bg-opacity));
 }
 
 .hover\:bg-accent-500:hover {
@@ -4254,8 +4254,8 @@ input[type='number'] {
 
 .focus\:bg-accent-400:focus {
   --bg-opacity: 1;
-  background-color: #7f9cf5;
-  background-color: rgba(127, 156, 245, var(--bg-opacity));
+  background-color: #7a85ff;
+  background-color: rgba(122, 133, 255, var(--bg-opacity));
 }
 
 .focus\:bg-accent-500:focus {
@@ -4833,8 +4833,8 @@ input[type='number'] {
 }
 
 .from-accent-400 {
-  --gradient-from-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-from-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .from-accent-500 {
@@ -5368,8 +5368,8 @@ input[type='number'] {
 }
 
 .via-accent-400 {
-  --gradient-via-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-via-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .via-accent-500 {
@@ -5805,7 +5805,7 @@ input[type='number'] {
 }
 
 .to-accent-400 {
-  --gradient-to-color: #7f9cf5;
+  --gradient-to-color: #7a85ff;
 }
 
 .to-accent-500 {
@@ -6331,8 +6331,8 @@ input[type='number'] {
 }
 
 .hover\:from-accent-400:hover {
-  --gradient-from-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-from-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .hover\:from-accent-500:hover {
@@ -6866,8 +6866,8 @@ input[type='number'] {
 }
 
 .hover\:via-accent-400:hover {
-  --gradient-via-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-via-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .hover\:via-accent-500:hover {
@@ -7303,7 +7303,7 @@ input[type='number'] {
 }
 
 .hover\:to-accent-400:hover {
-  --gradient-to-color: #7f9cf5;
+  --gradient-to-color: #7a85ff;
 }
 
 .hover\:to-accent-500:hover {
@@ -7829,8 +7829,8 @@ input[type='number'] {
 }
 
 .focus\:from-accent-400:focus {
-  --gradient-from-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-from-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .focus\:from-accent-500:focus {
@@ -8364,8 +8364,8 @@ input[type='number'] {
 }
 
 .focus\:via-accent-400:focus {
-  --gradient-via-color: #7f9cf5;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+  --gradient-via-color: #7a85ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
 }
 
 .focus\:via-accent-500:focus {
@@ -8801,7 +8801,7 @@ input[type='number'] {
 }
 
 .focus\:to-accent-400:focus {
-  --gradient-to-color: #7f9cf5;
+  --gradient-to-color: #7a85ff;
 }
 
 .focus\:to-accent-500:focus {
@@ -9562,8 +9562,8 @@ input[type='number'] {
 
 .border-accent-400 {
   --border-opacity: 1;
-  border-color: #7f9cf5;
-  border-color: rgba(127, 156, 245, var(--border-opacity));
+  border-color: #7a85ff;
+  border-color: rgba(122, 133, 255, var(--border-opacity));
 }
 
 .border-accent-500 {
@@ -10200,8 +10200,8 @@ input[type='number'] {
 
 .hover\:border-accent-400:hover {
   --border-opacity: 1;
-  border-color: #7f9cf5;
-  border-color: rgba(127, 156, 245, var(--border-opacity));
+  border-color: #7a85ff;
+  border-color: rgba(122, 133, 255, var(--border-opacity));
 }
 
 .hover\:border-accent-500:hover {
@@ -10838,8 +10838,8 @@ input[type='number'] {
 
 .focus\:border-accent-400:focus {
   --border-opacity: 1;
-  border-color: #7f9cf5;
-  border-color: rgba(127, 156, 245, var(--border-opacity));
+  border-color: #7a85ff;
+  border-color: rgba(122, 133, 255, var(--border-opacity));
 }
 
 .focus\:border-accent-500:focus {
@@ -21381,20 +21381,20 @@ input[type='number'] {
 
 .placeholder-accent-400::-webkit-input-placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .placeholder-accent-400:-ms-input-placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .placeholder-accent-400::placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .placeholder-accent-500::-webkit-input-placeholder {
@@ -23295,20 +23295,20 @@ input[type='number'] {
 
 .focus\:placeholder-accent-400:focus::-webkit-input-placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-accent-400:focus:-ms-input-placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-accent-400:focus::placeholder {
   --placeholder-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--placeholder-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-accent-500:focus::-webkit-input-placeholder {
@@ -24436,8 +24436,8 @@ input[type='number'] {
 
 .text-accent-400 {
   --text-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--text-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--text-opacity));
 }
 
 .text-accent-500 {
@@ -25074,8 +25074,8 @@ input[type='number'] {
 
 .hover\:text-accent-400:hover {
   --text-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--text-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--text-opacity));
 }
 
 .hover\:text-accent-500:hover {
@@ -25712,8 +25712,8 @@ input[type='number'] {
 
 .focus\:text-accent-400:focus {
   --text-opacity: 1;
-  color: #7f9cf5;
-  color: rgba(127, 156, 245, var(--text-opacity));
+  color: #7a85ff;
+  color: rgba(122, 133, 255, var(--text-opacity));
 }
 
 .focus\:text-accent-500:focus {
@@ -30515,8 +30515,8 @@ input[type='number'] {
 
   .sm\:divide-accent-400 > :not(template) ~ :not(template) {
     --divide-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--divide-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--divide-opacity));
   }
 
   .sm\:divide-accent-500 > :not(template) ~ :not(template) {
@@ -31274,8 +31274,8 @@ input[type='number'] {
 
   .sm\:bg-accent-400 {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .sm\:bg-accent-500 {
@@ -31912,8 +31912,8 @@ input[type='number'] {
 
   .sm\:hover\:bg-accent-400:hover {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .sm\:hover\:bg-accent-500:hover {
@@ -32550,8 +32550,8 @@ input[type='number'] {
 
   .sm\:focus\:bg-accent-400:focus {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .sm\:focus\:bg-accent-500:focus {
@@ -33129,8 +33129,8 @@ input[type='number'] {
   }
 
   .sm\:from-accent-400 {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:from-accent-500 {
@@ -33664,8 +33664,8 @@ input[type='number'] {
   }
 
   .sm\:via-accent-400 {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:via-accent-500 {
@@ -34101,7 +34101,7 @@ input[type='number'] {
   }
 
   .sm\:to-accent-400 {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .sm\:to-accent-500 {
@@ -34627,8 +34627,8 @@ input[type='number'] {
   }
 
   .sm\:hover\:from-accent-400:hover {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:hover\:from-accent-500:hover {
@@ -35162,8 +35162,8 @@ input[type='number'] {
   }
 
   .sm\:hover\:via-accent-400:hover {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:hover\:via-accent-500:hover {
@@ -35599,7 +35599,7 @@ input[type='number'] {
   }
 
   .sm\:hover\:to-accent-400:hover {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .sm\:hover\:to-accent-500:hover {
@@ -36125,8 +36125,8 @@ input[type='number'] {
   }
 
   .sm\:focus\:from-accent-400:focus {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:focus\:from-accent-500:focus {
@@ -36660,8 +36660,8 @@ input[type='number'] {
   }
 
   .sm\:focus\:via-accent-400:focus {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .sm\:focus\:via-accent-500:focus {
@@ -37097,7 +37097,7 @@ input[type='number'] {
   }
 
   .sm\:focus\:to-accent-400:focus {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .sm\:focus\:to-accent-500:focus {
@@ -37858,8 +37858,8 @@ input[type='number'] {
 
   .sm\:border-accent-400 {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .sm\:border-accent-500 {
@@ -38496,8 +38496,8 @@ input[type='number'] {
 
   .sm\:hover\:border-accent-400:hover {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .sm\:hover\:border-accent-500:hover {
@@ -39134,8 +39134,8 @@ input[type='number'] {
 
   .sm\:focus\:border-accent-400:focus {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .sm\:focus\:border-accent-500:focus {
@@ -49677,20 +49677,20 @@ input[type='number'] {
 
   .sm\:placeholder-accent-400::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-accent-400:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-accent-400::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-accent-500::-webkit-input-placeholder {
@@ -51591,20 +51591,20 @@ input[type='number'] {
 
   .sm\:focus\:placeholder-accent-400:focus::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-accent-400:focus:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-accent-400:focus::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-accent-500:focus::-webkit-input-placeholder {
@@ -52732,8 +52732,8 @@ input[type='number'] {
 
   .sm\:text-accent-400 {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .sm\:text-accent-500 {
@@ -53370,8 +53370,8 @@ input[type='number'] {
 
   .sm\:hover\:text-accent-400:hover {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-accent-500:hover {
@@ -54008,8 +54008,8 @@ input[type='number'] {
 
   .sm\:focus\:text-accent-400:focus {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-accent-500:focus {
@@ -58666,8 +58666,8 @@ input[type='number'] {
 
   .md\:divide-accent-400 > :not(template) ~ :not(template) {
     --divide-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--divide-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--divide-opacity));
   }
 
   .md\:divide-accent-500 > :not(template) ~ :not(template) {
@@ -59425,8 +59425,8 @@ input[type='number'] {
 
   .md\:bg-accent-400 {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .md\:bg-accent-500 {
@@ -60063,8 +60063,8 @@ input[type='number'] {
 
   .md\:hover\:bg-accent-400:hover {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .md\:hover\:bg-accent-500:hover {
@@ -60701,8 +60701,8 @@ input[type='number'] {
 
   .md\:focus\:bg-accent-400:focus {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .md\:focus\:bg-accent-500:focus {
@@ -61280,8 +61280,8 @@ input[type='number'] {
   }
 
   .md\:from-accent-400 {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:from-accent-500 {
@@ -61815,8 +61815,8 @@ input[type='number'] {
   }
 
   .md\:via-accent-400 {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:via-accent-500 {
@@ -62252,7 +62252,7 @@ input[type='number'] {
   }
 
   .md\:to-accent-400 {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .md\:to-accent-500 {
@@ -62778,8 +62778,8 @@ input[type='number'] {
   }
 
   .md\:hover\:from-accent-400:hover {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:hover\:from-accent-500:hover {
@@ -63313,8 +63313,8 @@ input[type='number'] {
   }
 
   .md\:hover\:via-accent-400:hover {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:hover\:via-accent-500:hover {
@@ -63750,7 +63750,7 @@ input[type='number'] {
   }
 
   .md\:hover\:to-accent-400:hover {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .md\:hover\:to-accent-500:hover {
@@ -64276,8 +64276,8 @@ input[type='number'] {
   }
 
   .md\:focus\:from-accent-400:focus {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:focus\:from-accent-500:focus {
@@ -64811,8 +64811,8 @@ input[type='number'] {
   }
 
   .md\:focus\:via-accent-400:focus {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .md\:focus\:via-accent-500:focus {
@@ -65248,7 +65248,7 @@ input[type='number'] {
   }
 
   .md\:focus\:to-accent-400:focus {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .md\:focus\:to-accent-500:focus {
@@ -66009,8 +66009,8 @@ input[type='number'] {
 
   .md\:border-accent-400 {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .md\:border-accent-500 {
@@ -66647,8 +66647,8 @@ input[type='number'] {
 
   .md\:hover\:border-accent-400:hover {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .md\:hover\:border-accent-500:hover {
@@ -67285,8 +67285,8 @@ input[type='number'] {
 
   .md\:focus\:border-accent-400:focus {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .md\:focus\:border-accent-500:focus {
@@ -77828,20 +77828,20 @@ input[type='number'] {
 
   .md\:placeholder-accent-400::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:placeholder-accent-400:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:placeholder-accent-400::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:placeholder-accent-500::-webkit-input-placeholder {
@@ -79742,20 +79742,20 @@ input[type='number'] {
 
   .md\:focus\:placeholder-accent-400:focus::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-accent-400:focus:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-accent-400:focus::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-accent-500:focus::-webkit-input-placeholder {
@@ -80883,8 +80883,8 @@ input[type='number'] {
 
   .md\:text-accent-400 {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .md\:text-accent-500 {
@@ -81521,8 +81521,8 @@ input[type='number'] {
 
   .md\:hover\:text-accent-400:hover {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-accent-500:hover {
@@ -82159,8 +82159,8 @@ input[type='number'] {
 
   .md\:focus\:text-accent-400:focus {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-accent-500:focus {
@@ -86817,8 +86817,8 @@ input[type='number'] {
 
   .lg\:divide-accent-400 > :not(template) ~ :not(template) {
     --divide-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--divide-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--divide-opacity));
   }
 
   .lg\:divide-accent-500 > :not(template) ~ :not(template) {
@@ -87576,8 +87576,8 @@ input[type='number'] {
 
   .lg\:bg-accent-400 {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .lg\:bg-accent-500 {
@@ -88214,8 +88214,8 @@ input[type='number'] {
 
   .lg\:hover\:bg-accent-400:hover {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .lg\:hover\:bg-accent-500:hover {
@@ -88852,8 +88852,8 @@ input[type='number'] {
 
   .lg\:focus\:bg-accent-400:focus {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .lg\:focus\:bg-accent-500:focus {
@@ -89431,8 +89431,8 @@ input[type='number'] {
   }
 
   .lg\:from-accent-400 {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:from-accent-500 {
@@ -89966,8 +89966,8 @@ input[type='number'] {
   }
 
   .lg\:via-accent-400 {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:via-accent-500 {
@@ -90403,7 +90403,7 @@ input[type='number'] {
   }
 
   .lg\:to-accent-400 {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .lg\:to-accent-500 {
@@ -90929,8 +90929,8 @@ input[type='number'] {
   }
 
   .lg\:hover\:from-accent-400:hover {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:hover\:from-accent-500:hover {
@@ -91464,8 +91464,8 @@ input[type='number'] {
   }
 
   .lg\:hover\:via-accent-400:hover {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:hover\:via-accent-500:hover {
@@ -91901,7 +91901,7 @@ input[type='number'] {
   }
 
   .lg\:hover\:to-accent-400:hover {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .lg\:hover\:to-accent-500:hover {
@@ -92427,8 +92427,8 @@ input[type='number'] {
   }
 
   .lg\:focus\:from-accent-400:focus {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:focus\:from-accent-500:focus {
@@ -92962,8 +92962,8 @@ input[type='number'] {
   }
 
   .lg\:focus\:via-accent-400:focus {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .lg\:focus\:via-accent-500:focus {
@@ -93399,7 +93399,7 @@ input[type='number'] {
   }
 
   .lg\:focus\:to-accent-400:focus {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .lg\:focus\:to-accent-500:focus {
@@ -94160,8 +94160,8 @@ input[type='number'] {
 
   .lg\:border-accent-400 {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .lg\:border-accent-500 {
@@ -94798,8 +94798,8 @@ input[type='number'] {
 
   .lg\:hover\:border-accent-400:hover {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .lg\:hover\:border-accent-500:hover {
@@ -95436,8 +95436,8 @@ input[type='number'] {
 
   .lg\:focus\:border-accent-400:focus {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .lg\:focus\:border-accent-500:focus {
@@ -105979,20 +105979,20 @@ input[type='number'] {
 
   .lg\:placeholder-accent-400::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-accent-400:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-accent-400::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-accent-500::-webkit-input-placeholder {
@@ -107893,20 +107893,20 @@ input[type='number'] {
 
   .lg\:focus\:placeholder-accent-400:focus::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-accent-400:focus:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-accent-400:focus::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-accent-500:focus::-webkit-input-placeholder {
@@ -109034,8 +109034,8 @@ input[type='number'] {
 
   .lg\:text-accent-400 {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .lg\:text-accent-500 {
@@ -109672,8 +109672,8 @@ input[type='number'] {
 
   .lg\:hover\:text-accent-400:hover {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-accent-500:hover {
@@ -110310,8 +110310,8 @@ input[type='number'] {
 
   .lg\:focus\:text-accent-400:focus {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-accent-500:focus {
@@ -114968,8 +114968,8 @@ input[type='number'] {
 
   .xl\:divide-accent-400 > :not(template) ~ :not(template) {
     --divide-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--divide-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--divide-opacity));
   }
 
   .xl\:divide-accent-500 > :not(template) ~ :not(template) {
@@ -115727,8 +115727,8 @@ input[type='number'] {
 
   .xl\:bg-accent-400 {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .xl\:bg-accent-500 {
@@ -116365,8 +116365,8 @@ input[type='number'] {
 
   .xl\:hover\:bg-accent-400:hover {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .xl\:hover\:bg-accent-500:hover {
@@ -117003,8 +117003,8 @@ input[type='number'] {
 
   .xl\:focus\:bg-accent-400:focus {
     --bg-opacity: 1;
-    background-color: #7f9cf5;
-    background-color: rgba(127, 156, 245, var(--bg-opacity));
+    background-color: #7a85ff;
+    background-color: rgba(122, 133, 255, var(--bg-opacity));
   }
 
   .xl\:focus\:bg-accent-500:focus {
@@ -117582,8 +117582,8 @@ input[type='number'] {
   }
 
   .xl\:from-accent-400 {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:from-accent-500 {
@@ -118117,8 +118117,8 @@ input[type='number'] {
   }
 
   .xl\:via-accent-400 {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:via-accent-500 {
@@ -118554,7 +118554,7 @@ input[type='number'] {
   }
 
   .xl\:to-accent-400 {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .xl\:to-accent-500 {
@@ -119080,8 +119080,8 @@ input[type='number'] {
   }
 
   .xl\:hover\:from-accent-400:hover {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:hover\:from-accent-500:hover {
@@ -119615,8 +119615,8 @@ input[type='number'] {
   }
 
   .xl\:hover\:via-accent-400:hover {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:hover\:via-accent-500:hover {
@@ -120052,7 +120052,7 @@ input[type='number'] {
   }
 
   .xl\:hover\:to-accent-400:hover {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .xl\:hover\:to-accent-500:hover {
@@ -120578,8 +120578,8 @@ input[type='number'] {
   }
 
   .xl\:focus\:from-accent-400:focus {
-    --gradient-from-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-from-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:focus\:from-accent-500:focus {
@@ -121113,8 +121113,8 @@ input[type='number'] {
   }
 
   .xl\:focus\:via-accent-400:focus {
-    --gradient-via-color: #7f9cf5;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0));
+    --gradient-via-color: #7a85ff;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(122, 133, 255, 0));
   }
 
   .xl\:focus\:via-accent-500:focus {
@@ -121550,7 +121550,7 @@ input[type='number'] {
   }
 
   .xl\:focus\:to-accent-400:focus {
-    --gradient-to-color: #7f9cf5;
+    --gradient-to-color: #7a85ff;
   }
 
   .xl\:focus\:to-accent-500:focus {
@@ -122311,8 +122311,8 @@ input[type='number'] {
 
   .xl\:border-accent-400 {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .xl\:border-accent-500 {
@@ -122949,8 +122949,8 @@ input[type='number'] {
 
   .xl\:hover\:border-accent-400:hover {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .xl\:hover\:border-accent-500:hover {
@@ -123587,8 +123587,8 @@ input[type='number'] {
 
   .xl\:focus\:border-accent-400:focus {
     --border-opacity: 1;
-    border-color: #7f9cf5;
-    border-color: rgba(127, 156, 245, var(--border-opacity));
+    border-color: #7a85ff;
+    border-color: rgba(122, 133, 255, var(--border-opacity));
   }
 
   .xl\:focus\:border-accent-500:focus {
@@ -134130,20 +134130,20 @@ input[type='number'] {
 
   .xl\:placeholder-accent-400::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-accent-400:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-accent-400::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-accent-500::-webkit-input-placeholder {
@@ -136044,20 +136044,20 @@ input[type='number'] {
 
   .xl\:focus\:placeholder-accent-400:focus::-webkit-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-accent-400:focus:-ms-input-placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-accent-400:focus::placeholder {
     --placeholder-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--placeholder-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-accent-500:focus::-webkit-input-placeholder {
@@ -137185,8 +137185,8 @@ input[type='number'] {
 
   .xl\:text-accent-400 {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .xl\:text-accent-500 {
@@ -137823,8 +137823,8 @@ input[type='number'] {
 
   .xl\:hover\:text-accent-400:hover {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-accent-500:hover {
@@ -138461,8 +138461,8 @@ input[type='number'] {
 
   .xl\:focus\:text-accent-400:focus {
     --text-opacity: 1;
-    color: #7f9cf5;
-    color: rgba(127, 156, 245, var(--text-opacity));
+    color: #7a85ff;
+    color: rgba(122, 133, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-accent-500:focus {

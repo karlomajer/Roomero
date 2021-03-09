@@ -20,8 +20,7 @@ const ListingCarousel = ({ images }) => {
       naturalSlideWidth={125}
       naturalSlideHeight={mobile.matches ? 80 : 65}
       totalSlides={images.length}
-      className='relative'
-      style={{ marginLeft: '-2rem', marginRight: '-2rem' }}
+      className='relative sm:-mx-8 w-screen -mx-4 sm:w-auto'
     >
       <Slider>
         {images.map((image, index) => (

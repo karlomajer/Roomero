@@ -139,7 +139,7 @@ const EditProfile = ({
                 }}
               >
                 <img
-                  className='w-full'
+                  className='h-full w-full'
                   style={{ height: '-webkit-fill-available' }}
                   id='avatar'
                   src={avatar}

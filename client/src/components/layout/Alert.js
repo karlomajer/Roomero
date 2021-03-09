@@ -8,19 +8,19 @@ const Alert = ({ alerts }) =>
   alerts.map(alert => (
     <div
       key={alert.id}
-      style={{ zIndex: '1' }}
-      className={`alert alert-${alert.alertType} md:w-11/12 lg:max-w-screen-lg`}
+      style={{ zIndex: '1', top: '80px' }}
+      className={`alert alert-${alert.alertType} md:w-11/12 lg:max-w-screen-lg absolute`}
     >
       {alert.msg}
     </div>
   ));
 
 Alert.propTypes = {
-  alerts: PropTypes.array.isRequired
+  alerts: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = state => ({
-  alerts: state.alert
+  alerts: state.alert,
 });
 
 export default connect(mapStateToProps)(Alert);

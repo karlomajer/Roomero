@@ -18,15 +18,15 @@
 
 /* Mobile font */
 .DateRangePicker > * > * > * {
-  font-size: 1.05rem !important;
+  font-size: 0.95rem !important;
 }
 
 .DateInput {
-  width: 120px !important;
+  width: 112px !important;
 }
 
 .DateInput_input {
-  color: #fcfcfc !important;
+  color: #cbd5e0 !important;
   font-weight: 400;
   background-color: #1a2029;
 }
@@ -93,5 +93,21 @@
 
 .DateRangePickerInput_arrow_svg {
   fill: #cbd5e0;
-  margin-right: 1.1rem;
+  margin-right: 0.2rem;
+  transform: scale(0.78);
+}
+
+@media (min-width: 640px) {
+  .DateRangePicker > * > * > * {
+    font-size: 1.05rem !important;
+  }
+
+  .DateRangePickerInput_arrow_svg {
+    transform: scale(1);
+    margin-right: 1.1rem;
+  }
+
+  .DateInput {
+    width: 120px !important;
+  }
 }

@@ -71,7 +71,7 @@ const Login = ({ login, isAuthenticated }) => {
             value='Sign In'
           />
         </form>
-        <p className='mt-3'>
+        <p className='mt-3 text-gray-500'>
           Don't have an account?{' '}
           <Link to='/register' className='text-accent-500 font-semibold'>
             Sign Up

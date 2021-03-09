@@ -26,8 +26,8 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
             className='border-secondary-300'
             style={{
               display: 'inline-block',
-              width: '2.5rem',
-              height: '2.5rem',
+              width: '2.75rem',
+              height: '2.75rem',
               borderRadius: '100%',
               overflow: 'hidden',
               borderWidth: '4px',
@@ -35,7 +35,7 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
           >
             <img
               src={profileAuth.avatar}
-              className='w-full object-cover'
+              className='h-full w-full object-cover'
               alt='Avatar'
             />
           </div>
@@ -44,7 +44,10 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
             className='dropdown-content bg-gray-800 shadow rounded-sm'
             style={{ left: '-20px' }}
           >
-            <Link to='/profile/me' className='block text-left pl-4 py-2'>
+            <Link
+              to='/profile/me'
+              className='block text-left pl-4 py-2 rounded-tl-sm rounded-tr-sm'
+            >
               Profile
             </Link>
             <Link to='/edit-profile' className='block text-left pl-4 py-2'>
@@ -53,7 +56,7 @@ export const AuthLinksDesktop = ({ logout, profileAuth }) => (
             <div className='border-b border-accent-500' />
             <button
               onClick={() => logout()}
-              className='block w-full text-left pl-4 py-2'
+              className='block w-full text-left pl-4 py-2 rounded-bl-sm rounded-br-sm'
             >
               Logout
             </button>
@@ -100,7 +103,7 @@ export const AuthLinksMobile = ({ logout, profileAuth }) => (
           >
             <img
               src={profileAuth.avatar}
-              className='w-full object-cover cursor-pointer'
+              className='h-full w-full object-cover cursor-pointer'
               alt='Avatar'
             />
           </div>

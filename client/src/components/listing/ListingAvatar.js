@@ -7,24 +7,25 @@ const ListingAvatar = ({ owner: { name, avatar, _id } }) => {
     <div className='ml-4 md:pr-4 mb-0 mt-6 md:mt-2'>
       <Link
         to={`/profile/${_id}`}
-        className='text-gray-600 hover:text-accent-500 transition-colors duration-150'
+        className='text-gray-600 hover:text-accent-500 transition-colors duration-200'
       >
         <div
-          className='mx-auto cursor-pointer'
+          className='mx-auto cursor-pointer border-secondary-300'
           style={{
-            width: '4.15rem',
-            height: '4.15rem',
+            width: '4.45rem',
+            height: '4.45rem',
             borderRadius: '100%',
             overflow: 'hidden',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            borderWidth: '4px',
           }}
         >
           <img
             style={{ height: '-webkit-fill-available' }}
             src={avatar}
-            className='w-full object-cover'
+            className='h-full w-full object-cover'
             alt='Avatar'
           />
         </div>

@@ -44,7 +44,7 @@ const Profile = ({
             >
               <img
                 src={profile.avatar}
-                className='w-full object-cover cursor-pointer'
+                className='h-full w-full object-cover cursor-pointer'
                 alt='Avatar'
               />
             </div>

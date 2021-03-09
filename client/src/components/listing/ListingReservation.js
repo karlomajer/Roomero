@@ -82,7 +82,7 @@ const ListingReservation = ({
   };
 
   return (
-    <div className='my-4 md:mt-3 p-6 bg-secondary-300 rounded-md'>
+    <div className='my-4 -mx-4 sm:mx-0 md:mt-3 p-6 bg-secondary-300 rounded-md'>
       <h2 className='text-lg font-semibold pb-3 md:border-b md:border-secondary-100 '>
         Add dates for prices
       </h2>
@@ -121,14 +121,14 @@ const ListingReservation = ({
       />
       {startDate && endDate && (
         <div className='mt-5' style={{ fontSize: '0.925rem' }}>
-          <div className='flex justify-between'>
+          <div className='flex justify-between text-gray-400'>
             <span>
               {pricePerNight} € x {nightsSelected} nights
             </span>
             <span>{pricePerNight * nightsSelected} €</span>
           </div>
           <div className='section-line my-2' />
-          <div className='flex justify-between'>
+          <div className='flex justify-between text-gray-400'>
             <span>Service fee</span>
             <span>5 €</span> {/* Hardcoded service fee */}
           </div>

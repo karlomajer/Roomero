@@ -109,7 +109,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value='Sign Up'
           />
         </form>
-        <p className='my-1'>
+        <p className='mt-3 text-gray-500'>
           Already have an account?{' '}
           <Link to='/login' className='text-accent-500 font-semibold'>
             Sign In

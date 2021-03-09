@@ -45,7 +45,7 @@ const ReservationItem = ({
             className='w-full h-64 md:h-32 md:w-64 object-cover rounded'
           />
         </Link>
-        <div className='mt-4 md:mt-0 md:ml-6 flex flex-row flex-wrap justify-between w-full items-center'>
+        <div className='mt-4 md:mt-0 md:ml-6 flex flex-row flex-wrap justify-end sm:justify-between w-full items-center'>
           <div className='w-full md:w-250px md:max-w-250px flex-grow md:flex-grow-0 mb-2 md:mb-0'>
             <h1 className='text-xl font-semibold'>{formatDate()}</h1>
             <Link to={`/listing/${listing._id}`} className='block'>

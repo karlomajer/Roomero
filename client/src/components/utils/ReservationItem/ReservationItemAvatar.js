@@ -5,7 +5,7 @@ import Truncate from 'react-truncate';
 
 const ReservationItemAvatar = ({ id, name, avatar }) => {
   return (
-    <div className='flex flex-row items-center'>
+    <div className='sm:flex flex-row items-center hidden'>
       <Link to={`/profile/${id}`}>
         <div
           className='mx-auto cursor-pointer'

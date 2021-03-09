@@ -9,7 +9,7 @@ const Marker = () => (
       width: '40px',
       height: '48px',
       content: `url(${marker})`,
-      transform: 'translate(-32%, -85%)'
+      transform: 'translate(-32%, -85%)',
     }}
   />
 );
@@ -20,7 +20,8 @@ const ListingLocation = ({ coordinates }) => {
     <div>
       <h2 className='text-xl font-semibold mb-4'>Location</h2>
       <div
-        style={{ height: mobile.matches ? '20rem' : '30rem', width: '100%' }}
+        className='w-screen -mx-4 sm:w-full sm:mx-0'
+        style={{ height: mobile.matches ? '20rem' : '30rem' }}
       >
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyD0tVdxFEFfJeoiqeXWOqvitP487LRhph8' }}
@@ -35,7 +36,7 @@ const ListingLocation = ({ coordinates }) => {
 };
 
 ListingLocation.propTypes = {
-  coordinates: PropTypes.object.isRequired
+  coordinates: PropTypes.object.isRequired,
 };
 
 export default ListingLocation;

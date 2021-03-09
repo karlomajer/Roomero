@@ -24,7 +24,7 @@ const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
         searchOptions={searchOptions}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className='form-group flex-wrap'>
+          <div className='form-group flex-wrap bg-secondary-300 rounded-md shadow'>
             {/* As per documentation, an input which gets its props from getInputProps function needs to be included and it's also possible to pass in additional proprs to that function, like placeholder */}
             <input
               {...getInputProps({
@@ -41,12 +41,16 @@ const LocationAutocomplete = ({ location, setLocation, setCoordinates }) => {
             <div className='block w-full md:ml-40'>
               {suggestions.map(suggestion => {
                 const style = {
-                  backgroundColor: suggestion.active ? '#667eea' : '#ebf4ff',
-                  color: suggestion.active ? '#fff' : '#26282c',
+                  backgroundColor: suggestion.active ? '#2a3059' : '#151a22',
+                  color: suggestion.active ? '#fff' : '#d1d5db',
                 };
 
                 const className =
-                  'w-full md:w-1/2 p-2 first:border-0 first:rounded-t-md first:mt-4 last:rounded-b-md border-t border-gray-200 text-gray-800 font-medium cursor-pointer';
+                'w-full md:w-1/2 p-2 first:border-0 first:rounded-t-md first:mt-4 last:rounded-b-md border-t border-secondary-100 font-medium cursor-pointer';
+
+                return (
+                  <div
+
 
                 return (
                   <div

@@ -44,7 +44,7 @@ const Listing = ({
                   <div className='section-line my-6' />
                 </Fragment>
               )}
-              {listing.amenities && (
+              {listing.amenities && listing.amenities.length > 0 && (
                 <ListingAmenities amenities={listing.amenities} />
               )}
             </div>

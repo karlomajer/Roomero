@@ -61,8 +61,6 @@ router.post('/', [auth], async (req, res) => {
         { new: true } // Set new to true to return document after the update is applied (to the profile variable, so we can use it later)
       );
 
-      console.log('previous avatar was');
-      console.log(previousAvatar);
       if (previousAvatar && !previousAvatar.endsWith('default.png')) {
         fs.unlink(
           `${path.dirname(require.main.filename)}${previousAvatar}`,

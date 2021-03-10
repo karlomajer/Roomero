@@ -55,9 +55,7 @@ export const register = (name, email, password) => async dispatch => {
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
-    console.log('pass A');
     dispatch(loadUser());
-    console.log('pass B');
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {

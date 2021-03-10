@@ -16,7 +16,7 @@ const ListingTopInfo = ({ listing }) => {
       <p className='mb-3 text-gray-600'>{listing.location.join(', ')}</p>
       <span className='inline-flex items-center mr-4 md:mr-8 text-gray-400'>
         <i
-          class='fa fa-home'
+          className='fa fa-home'
           style={{
             marginRight: '0.35rem',
             marginBottom: '-0.1rem',
@@ -28,7 +28,7 @@ const ListingTopInfo = ({ listing }) => {
       </span>
       <span className='inline-flex items-center mr-4 md:mr-8 text-gray-400'>
         <i
-          class='fa fa-users'
+          className='fa fa-users'
           style={{
             marginRight: '0.35rem',
             marginBottom: '-0.1rem',
@@ -42,7 +42,7 @@ const ListingTopInfo = ({ listing }) => {
       </span>
       <span className='inline-flex items-center mr-8 text-gray-400'>
         <i
-          class='fa fa-bath'
+          className='fa fa-bath'
           style={{
             marginRight: '0.35rem',
             marginBottom: '-0.1rem',

@@ -12,7 +12,6 @@ const FileUpload = ({
 }) => {
   const onChange = e => {
     setFiles([...e.target.files]);
-    console.log(e.target.files);
   };
 
   useEffect(() => {

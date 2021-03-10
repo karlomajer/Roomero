@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createListing } from '../../actions/listing';
+import { setLoading } from '../../actions/upload';
 import Checkbox from '../utils/Checkbox/Checkbox';
 import { amenitiesValues } from '../utils/Checkbox/checkboxValues';
 import Radiobutton from '../utils/RadioButton/Radiobutton';
@@ -10,7 +11,7 @@ import { propertyTypeValues } from '../utils/RadioButton/radiobuttonValues';
 import FileUpload from '../utils/FileUpload';
 import LocationAutocomplete from './LocationAutocomplete';
 
-const CreateListing = ({ createListing, history }) => {
+const CreateListing = ({ createListing, setLoading, upload, history }) => {
   const [formData, setFormData] = useState({
     title: '',
     propertyType: '',
@@ -44,8 +45,9 @@ const CreateListing = ({ createListing, history }) => {
       amenities: Object.keys(checkedAmenities).filter(
         amenity => checkedAmenities[amenity] === true
       ),
-      images: uploadData.filePaths,
+      images: uploadData,
     };
+
     createListing(_formData, history);
   };
 
@@ -61,7 +63,7 @@ const CreateListing = ({ createListing, history }) => {
 
   // For FileUpload
   const [files, setFiles] = useState([]);
-  const [uploadData, setUploadData] = useState({});
+  const [uploadData, setUploadData] = useState([]);
 
   return (
     <div className='container page-wrap flex-grow max-w-screen-xl mx-auto mt-20 mb-4 px-4 sm:px-8 md:px-10'>
@@ -168,10 +170,10 @@ const CreateListing = ({ createListing, history }) => {
           </div>
           <div className='form-group sm:flex-wrap'>
             <FileUpload
-              uploadLocation={'listings'}
               files={files}
               setFiles={setFiles}
               setUploadData={setUploadData}
+              setLoading={setLoading}
               multiple={true}
               required={true}
             />
@@ -179,7 +181,11 @@ const CreateListing = ({ createListing, history }) => {
           </div>
           <input
             type='submit'
-            className='btn btn-primary my-5 w-full md:w-auto'
+            className={[
+              'btn btn-primary my-5 w-full md:w-auto',
+              upload.loading &&
+                'hover:bg-gray-500 bg-gray-500 opacity-50 cursor-default',
+            ].join(' ')}
             value='Submit listing'
           />
         </form>
@@ -190,6 +196,14 @@ const CreateListing = ({ createListing, history }) => {
 
 CreateListing.propTypes = {
   createListing: PropTypes.func.isRequired,
+  setLoading: PropTypes.func,
+  upload: PropTypes.object,
 };
 
-export default connect(null, { createListing })(withRouter(CreateListing));
+const mapStateToProps = state => ({
+  upload: state.upload,
+});
+
+export default connect(mapStateToProps, { createListing, setLoading })(
+  withRouter(CreateListing)
+);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createProfile } from '../../actions/profile';
+import { setLoading } from '../../actions/upload';
 import FileUpload from '../utils/FileUpload';
 import Spinner from '../utils/Spinner';
 
@@ -9,6 +10,8 @@ const EditProfile = ({
   history,
   createProfile,
   profile: { profileAuth, loading },
+  setLoading,
+  upload,
 }) => {
   const [formData, setFormData] = useState({
     bio: '',
@@ -20,13 +23,12 @@ const EditProfile = ({
   useEffect(() => {
     if (loading === false) {
       setFormData({
-        bio: loading || !profileAuth.bio ? '' : profileAuth.bio,
-        location: loading || !profileAuth.location ? '' : profileAuth.location,
-        languages:
-          loading || !profileAuth.languages
-            ? ''
-            : profileAuth.languages.join(', '),
-        avatar: loading || !profileAuth.avatar ? '' : profileAuth.avatar,
+        bio: !profileAuth.bio ? '' : profileAuth.bio,
+        location: !profileAuth.location ? '' : profileAuth.location,
+        languages: !profileAuth.languages
+          ? ''
+          : profileAuth.languages.join(', '),
+        avatar: !profileAuth.avatar ? '' : profileAuth.avatar,
       });
     }
   }, [loading, profileAuth]);
@@ -49,13 +51,14 @@ const EditProfile = ({
 
   const onSubmit = async e => {
     e.preventDefault();
+
     const _formData = {
       ...formData,
       previousAvatar:
-        avatar !== uploadData.filePaths &&
-        uploadData.filePaths !== undefined &&
+        avatar !== uploadData.imageUrl &&
+        uploadData.imageUrl !== undefined &&
         avatar,
-      avatar: uploadData.filePaths,
+      avatar: uploadData[0],
     };
     createProfile(_formData, history, true);
   };
@@ -116,10 +119,10 @@ const EditProfile = ({
             </div>
             <div className='form-group sm:flex-wrap'>
               <FileUpload
-                uploadLocation={'avatars'}
                 files={files}
                 setFiles={setFiles}
                 setUploadData={setUploadData}
+                setLoading={setLoading}
                 multiple={false}
                 required={false}
               />
@@ -151,7 +154,11 @@ const EditProfile = ({
             </div>
             <input
               type='submit'
-              className='btn btn-primary my-5 w-full md:w-auto'
+              className={[
+                'btn btn-primary my-5 w-full md:w-auto',
+                upload.loading &&
+                  'hover:bg-gray-500 bg-gray-500 opacity-50 cursor-default',
+              ].join(' ')}
               value='Update profile'
             />
           </form>
@@ -163,11 +170,16 @@ const EditProfile = ({
 
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
+  setLoading: PropTypes.func,
   profile: PropTypes.object.isRequired,
+  upload: PropTypes.object,
 };
 
 const mapStateToProps = state => ({
   profile: state.profile,
+  upload: state.upload,
 });
 
-export default connect(mapStateToProps, { createProfile })(EditProfile);
+export default connect(mapStateToProps, { createProfile, setLoading })(
+  EditProfile
+);

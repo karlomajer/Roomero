@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 const FileUpload = ({
-  uploadLocation,
   files,
   setFiles,
   setUploadData,
+  setLoading,
   multiple,
   required,
 }) => {
@@ -15,39 +15,43 @@ const FileUpload = ({
   };
 
   useEffect(() => {
-    files.length > 0 && onSubmit();
+    if (files.length > 0) {
+      setLoading(true);
+      onSubmit();
+    }
   }, [files]);
 
   const onSubmit = async () => {
-    const formData = new FormData();
-    files.forEach(file => {
-      formData.append('file', file);
-    });
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    };
 
-    try {
-      const config = {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      };
+    setUploadData([]);
 
-      const res = await axios.post(
-        `/api/upload/${uploadLocation}`,
-        formData,
-        config
-      );
+    await Promise.all(
+      files.map(async file => {
+        const formData = new FormData();
+        formData.append('image', file);
 
-      // After receiving the response, we get back the uploaded file so we set it into state if we plan to use it
-      const { fileNames, filePaths } = res.data;
-      setUploadData({ fileNames, filePaths });
-    } catch (err) {
-      console.log(err);
-      if (err.response.status === 500) {
-        console.log('There was a problem with the server');
-      } else {
-        console.log(err.response.data.msg);
-      }
-    }
+        try {
+          const res = await axios.post('/api/upload', formData, config);
+
+          const { imageUrl } = res.data;
+          setUploadData(uploadData => [...uploadData, imageUrl]);
+        } catch (err) {
+          console.log(err);
+          if (err.response.status === 500) {
+            console.log('There was a problem with the server');
+          } else {
+            console.log(err.response.data.msg);
+          }
+        }
+      })
+    );
+
+    setLoading(false);
   };
 
   return (
@@ -66,10 +70,10 @@ const FileUpload = ({
 };
 
 FileUpload.propTypes = {
-  uploadLocation: PropTypes.string.isRequired,
   files: PropTypes.array.isRequired,
   setFiles: PropTypes.func.isRequired,
   setUploadData: PropTypes.func.isRequired,
+  setLoading: PropTypes.func,
   multiple: PropTypes.bool.isRequired,
   required: PropTypes.bool.isRequired,
 };

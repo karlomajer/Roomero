@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
-const { check, validationResult } = require('express-validator');
-const path = require('path');
-const fs = require('fs');
+const { validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
 
@@ -60,15 +58,6 @@ router.post('/', [auth], async (req, res) => {
         { $set: profileFields },
         { new: true } // Set new to true to return document after the update is applied (to the profile variable, so we can use it later)
       );
-
-      if (previousAvatar && !previousAvatar.endsWith('default.png')) {
-        fs.unlink(
-          `${path.dirname(require.main.filename)}${previousAvatar}`,
-          err => {
-            if (err) throw err;
-          }
-        );
-      }
 
       return res.json(profile);
     }

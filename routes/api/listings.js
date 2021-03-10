@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { sanitize, check, validationResult } = require('express-validator');
-const path = require('path');
-const fs = require('fs');
 const Moment = require('moment');
 const MomentRange = require('moment-range');
 const moment = MomentRange.extendMoment(Moment);
@@ -160,14 +158,6 @@ router.delete('/:id', auth, async (req, res) => {
     if (listing.owner.toString() !== req.profile.id) {
       return res.status(401).json({ msg: 'User not authorized' });
     }
-
-    listing.images.forEach(image => {
-      fs.unlink(`${path.dirname(require.main.filename)}${image}`, err => {
-        if (err) {
-          throw err;
-        }
-      });
-    });
 
     await listing.deleteOne();
 

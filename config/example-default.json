@@ -1,4 +1,7 @@
 {
     "mongoURI": "mongo_URI_here",
-    "jwtSecret": "jwt_secret_here"
+    "jwtSecret": "jwt_secret_here",
+    "AWSsecretAccessKey": "aws_secret_key_here",
+    "AWSaccessKeyId": "aws_access_key_here",
+    "AWSregion": "aws_region_here"
 }
